@@ -9,7 +9,7 @@
   --bg-hero:       #0D0D0D;
   --text:          #0D0D0D;
   --text-secondary:#444444;
-  --text-muted:    #777777;
+  --text-muted:    #666666;
   --text-inverse:  #FFFFFF;
   --accent:        #6B1F7A;
   --accent-hover:  #531761;
@@ -22,13 +22,13 @@
   --tag-paper-bg:      #F3E8F5;
   --tag-paper-text:    #6B1F7A;
   --tag-project-bg:    #E0F4F4;
-  --tag-project-text:  #1A8C8A;
+  --tag-project-text:  #136E6D;
   --tag-tool-bg:       #FCE8E5;
   --tag-tool-text:     #CC2200;
   --tag-community-bg:  #F3E8F5;
   --tag-community-text:#6B1F7A;
   --tag-framework-bg:  #E0F4F4;
-  --tag-framework-text:#1A8C8A;
+  --tag-framework-text:#136E6D;
   --tag-guide-bg:      #FCE8E5;
   --tag-guide-text:    #CC2200;
 
@@ -41,6 +41,25 @@
 
   --max-width: 1200px;
   --section-pad: 5rem 1.5rem;
+}
+
+/* ── Skip link ───────────────────────────────────────────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 1rem;
 }
 
 /* ── Reset ───────────────────────────────────────────────────────────────── */
