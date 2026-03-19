@@ -520,6 +520,55 @@ a:hover { color: var(--accent-hover); }
   .btn { width: 100%; justify-content: center; }
 }
 
+/* ── About section ───────────────────────────────────────────────────────── */
+.about-section {
+  background: var(--bg-alt);
+  padding: var(--section-pad);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.about-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin-bottom: 1.1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+.about-text a {
+  color: var(--accent);
+}
+
+.about-text a:hover {
+  color: var(--accent-hover);
+}
+
+/* ── Footer byline link ───────────────────────────────────────────────────── */
+.footer-byline-link {
+  color: rgba(255,255,255,0.55);
+  text-decoration: underline;
+}
+.footer-byline-link:hover {
+  color: var(--text-inverse);
+}
+
 /* ── Accessibility ───────────────────────────────────────────────────────── */
 :focus-visible {
   outline: 2px solid var(--accent-light);
