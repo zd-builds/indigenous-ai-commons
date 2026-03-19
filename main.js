@@ -5,12 +5,12 @@ const CATEGORIES = [
   {
     id: "indigenous-built-ai",
     title: "Indigenous-Built AI",
-    description: "Tools, models, and projects built from within communities — where indigenous peoples are not the subject of the technology but its architects."
+    description: "Tools, models, and projects built from within communities — where Indigenous peoples are not the subject of the technology but its architects."
   },
   {
     id: "community-solutions",
     title: "Community Solutions",
-    description: "What tribes and indigenous governments are actually implementing — real decisions, real infrastructure, real governance."
+    description: "What tribes and Indigenous governments are actually implementing — real decisions, real infrastructure, real governance."
   },
   {
     id: "data-as-culture",
@@ -20,12 +20,12 @@ const CATEGORIES = [
   {
     id: "academic-research",
     title: "Academic Research",
-    description: "Papers, studies, and scholarly work on AI and indigenous communities — including work that centers indigenous epistemologies, not just applies Western frameworks to indigenous subjects."
+    description: "Papers, studies, and scholarly work on AI and Indigenous communities — including work that centers Indigenous epistemologies, not just applies Western frameworks to Indigenous subjects."
   },
   {
     id: "global-resources",
     title: "Global Resources",
-    description: "International examples, frameworks, and voices — because indigenous communities across the world are asking the same questions and building answers worth sharing."
+    description: "International examples, frameworks, and voices — because Indigenous communities across the world are asking the same questions and building answers worth sharing."
   },
   {
     id: "before-you-continue",
