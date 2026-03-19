@@ -61,7 +61,7 @@ function renderCard(resource) {
 }
 
 function renderSection(category) {
-  const resources = RESOURCES.filter(r => r.category === category.id);
+  const resources = RESOURCES.filter(r => r.category === category.id && r.published !== false);
   if (resources.length === 0) return "";
 
   const cards = resources.map(renderCard).join("");
