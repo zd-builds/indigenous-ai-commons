@@ -2,11 +2,11 @@
 
 const CATEGORIES = [
   { id: "indigenous-built-ai",  title: "Indigenous-Built AI",  description: "Tools, models, and projects built from within communities." },
+  { id: "safer-ai-practices",   title: "Safer AI Practices",   description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing." },
   { id: "community-solutions",  title: "Community Solutions",  description: "What tribes and Indigenous governments are actually implementing." },
   { id: "data-as-culture",      title: "Data as Culture",      description: "Resources that treat data sovereignty as a living concept rooted in cultural values." },
   { id: "academic-research",    title: "Academic Research",    description: "Papers, studies, and scholarly work on AI and Indigenous communities." },
-  { id: "global-resources",     title: "Global Resources",     description: "International examples, frameworks, and voices." },
-  { id: "safer-ai-practices",   title: "Safer AI Practices",   description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing." }
+  { id: "global-resources",     title: "Global Resources",     description: "International examples, frameworks, and voices." }
 ];
 
 const TYPE_LABELS = { paper: "Paper", project: "Project", tool: "Tool", community: "Community", framework: "Framework", guide: "Guide" };
