@@ -158,3 +158,37 @@ a:hover { color:var(--accent-hover); }
 }
 :focus-visible { outline:2px solid var(--accent-light); outline-offset:3px; }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
+
+/* Safer AI Practices — question card format */
+.card--question {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+  gap: 0.85rem;
+}
+.card--question:hover { background: rgba(255,255,255,0.15); }
+.card-question {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-inverse);
+  line-height: 1.4;
+}
+.card--question .card-description { color: rgba(255,255,255,0.75); }
+.card-bullets {
+  padding-left: 1.25rem;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-top: -0.25rem;
+}
+.card-bullets li { margin-bottom: 0.2rem; }
+.card-resource-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.card-resource-link:hover { color: #fff; text-decoration: underline; }
