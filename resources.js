@@ -492,7 +492,7 @@ const RESOURCES = [
     description: "GitHub Copilot accesses code and context beyond what you explicitly prompt. Before using it on community projects, understand what it can see and what may leave your environment.",
     region: "Global",
     published: true
-  }
+  },
 
   {
     id: "digitalapplied-local-llm",
