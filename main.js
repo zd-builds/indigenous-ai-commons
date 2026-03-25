@@ -21,7 +21,8 @@ function renderNav() {
   const catLinks = CATEGORIES.map(cat =>
     `<a href="${cat.id}.html" class="nav-link ${current === cat.id ? "active" : ""}">${cat.title}</a>`
   ).join("");
-  document.getElementById("nav-links").innerHTML = homeLink + catLinks;
+  const aboutLink = `<a href="about.html" class="nav-link ${current === "about" ? "active" : ""}">About</a>`;
+  document.getElementById("nav-links").innerHTML = homeLink + catLinks + aboutLink;
 }
 
 function renderCard(resource) {
