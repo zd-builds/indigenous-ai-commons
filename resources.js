@@ -108,6 +108,16 @@ const RESOURCES = [
     published: true
   },
   {
+    id: "aipi-tribal-sovereignty",
+    title: "ASU AIPI — Proactive Solutions for Tribal Digital Sovereignty",
+    url: "https://aipi.asu.edu/blog/2026/02/proactive-solutions-implementing-tribal-digital-sovereignty",
+    type: "guide",
+    category: "community-solutions",
+    description: "From Arizona State University's American Indian Policy Institute, a 2026 analysis of implementation strategies tribal nations are using to assert digital sovereignty, covering governance structures, data policies, and AI decision frameworks.",
+    region: "United States",
+    published: true
+  },
+  {
     id: "conservation-metrics",
     title: "Conservation Metrics",
     url: "https://conservationmetrics.com/",
@@ -484,4 +494,26 @@ const RESOURCES = [
     published: true
   }
 
+  {
+    id: "digitalapplied-local-llm",
+    title: "Digital Applied: Local LLM Deployment Privacy Guide",
+    url: "https://www.digitalapplied.com/blog/local-llm-deployment-privacy-guide-2025",
+    type: "guide",
+    category: "safer-ai-practices",
+    question: "How do you evaluate whether a local AI tool is actually private?",
+    description: "Not all local AI tools are equal on privacy. This guide evaluates tools across six privacy criteria and flags that closed-source options like LM Studio have audit limitations. For communities with compliance requirements, open-source tools like Ollama and llama.cpp are recommended.",
+    region: "Global",
+    published: true
+  },
+  {
+    id: "snitchbench",
+    title: "SnitchBench",
+    url: "https://www.snitchbench.com/dashboard",
+    type: "tool",
+    category: "safer-ai-practices",
+    question: "Could your AI report your conversations to authorities?",
+    description: "A benchmark that tests how aggressively different AI models report user conversations to the FBI, FDA, or media. Some cloud models contact authorities after a single message. For Indigenous communities with well-founded concerns about federal surveillance, this is not hypothetical — it is a documented behavior of cloud AI systems.",
+    region: "Global",
+    published: true
+  },
 ];
