@@ -1,12 +1,12 @@
 // Indigenous AI Commons — Main JS (multi-page)
 
 const CATEGORIES = [
-  { id: "indigenous-built-ai", title: "Indigenous-Built AI", description: "Tools, models, and projects built from within communities — where Indigenous peoples are not the subject of the technology but its architects." },
-  { id: "community-solutions", title: "Community Solutions", description: "What tribes and Indigenous governments are actually implementing — real decisions, real infrastructure, real governance." },
-  { id: "data-as-culture", title: "Data as Culture", description: "Resources that treat data sovereignty as a living concept rooted in cultural values — not just legal protection, not just a compliance question." },
-  { id: "academic-research", title: "Academic Research", description: "Papers, studies, and scholarly work on AI and Indigenous communities — including work that centers Indigenous epistemologies, not just applies Western frameworks to Indigenous subjects." },
-  { id: "global-resources", title: "Global Resources", description: "International examples, frameworks, and voices — because Indigenous communities across the world are asking the same questions and building answers worth sharing." },
-  { id: "before-you-continue", title: "Before You Continue", description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing. The US experience is a warning: non-native governments and corporations have used data as a tool of control before. They will again." }
+  { id: "indigenous-built-ai",  title: "Indigenous-Built AI",  description: "Tools, models, and projects built from within communities." },
+  { id: "community-solutions",  title: "Community Solutions",  description: "What tribes and Indigenous governments are actually implementing." },
+  { id: "data-as-culture",      title: "Data as Culture",      description: "Resources that treat data sovereignty as a living concept rooted in cultural values." },
+  { id: "academic-research",    title: "Academic Research",    description: "Papers, studies, and scholarly work on AI and Indigenous communities." },
+  { id: "global-resources",     title: "Global Resources",     description: "International examples, frameworks, and voices." },
+  { id: "safer-ai-practices",   title: "Safer AI Practices",   description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing." }
 ];
 
 const TYPE_LABELS = { paper: "Paper", project: "Project", tool: "Tool", community: "Community", framework: "Framework", guide: "Guide" };
@@ -25,6 +25,18 @@ function renderNav() {
 }
 
 function renderCard(resource) {
+  if (resource.question) {
+    const bulletsHtml = resource.bullets
+      ? `<ul class="card-bullets">${resource.bullets.map(b => `<li>${b}</li>`).join("")}</ul>`
+      : "";
+    return `
+      <article class="card card--question">
+        <h3 class="card-question">${resource.question}</h3>
+        <p class="card-description">${resource.description}</p>
+        ${bulletsHtml}
+        <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="card-resource-link">${resource.title} &rarr;</a>
+      </article>`;
+  }
   const typeLabel = TYPE_LABELS[resource.type] || resource.type;
   const region = resource.region ? `<span class="card-region">${resource.region}</span>` : "";
   return `
@@ -58,7 +70,7 @@ function renderCategoryPage(categoryId) {
   const category = CATEGORIES.find(c => c.id === categoryId);
   if (!category) return;
   const resources = RESOURCES.filter(r => r.category === categoryId && r.published !== false);
-  const isAccent = categoryId === "before-you-continue";
+  const isAccent = categoryId === "safer-ai-practices";
   const main = document.getElementById("main-content");
   main.innerHTML = `
     <div class="page-header${isAccent ? " page-header--accent" : ""}">
