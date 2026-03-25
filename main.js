@@ -1,47 +1,28 @@
-// Indigenous AI Commons — Main JS
-// Renders resource cards into each category section
+// Indigenous AI Commons — Main JS (multi-page)
 
 const CATEGORIES = [
-  {
-    id: "indigenous-built-ai",
-    title: "Indigenous-Built AI",
-    description: "Tools, models, and projects built from within communities — where indigenous peoples are not the subject of the technology but its architects."
-  },
-  {
-    id: "community-solutions",
-    title: "Community Solutions",
-    description: "What tribes and indigenous governments are actually implementing — real decisions, real infrastructure, real governance."
-  },
-  {
-    id: "data-as-culture",
-    title: "Data as Culture",
-    description: "Resources that treat data sovereignty as a living concept rooted in cultural values — not just legal protection, not just a compliance question."
-  },
-  {
-    id: "academic-research",
-    title: "Academic Research",
-    description: "Papers, studies, and scholarly work on AI and indigenous communities — including work that centers indigenous epistemologies, not just applies Western frameworks to indigenous subjects."
-  },
-  {
-    id: "global-resources",
-    title: "Global Resources",
-    description: "International examples, frameworks, and voices — because indigenous communities across the world are asking the same questions and building answers worth sharing."
-  },
-  {
-    id: "before-you-continue",
-    title: "Before You Continue",
-    description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing. The US experience is a warning: non-native governments and corporations have used data as a tool of control before. They will again."
-  }
+  { id: "indigenous-built-ai", title: "Indigenous-Built AI", description: "Tools, models, and projects built from within communities — where Indigenous peoples are not the subject of the technology but its architects." },
+  { id: "community-solutions", title: "Community Solutions", description: "What tribes and Indigenous governments are actually implementing — real decisions, real infrastructure, real governance." },
+  { id: "data-as-culture", title: "Data as Culture", description: "Resources that treat data sovereignty as a living concept rooted in cultural values — not just legal protection, not just a compliance question." },
+  { id: "academic-research", title: "Academic Research", description: "Papers, studies, and scholarly work on AI and Indigenous communities — including work that centers Indigenous epistemologies, not just applies Western frameworks to Indigenous subjects." },
+  { id: "global-resources", title: "Global Resources", description: "International examples, frameworks, and voices — because Indigenous communities across the world are asking the same questions and building answers worth sharing." },
+  { id: "before-you-continue", title: "Before You Continue", description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing. The US experience is a warning: non-native governments and corporations have used data as a tool of control before. They will again." }
 ];
 
-const TYPE_LABELS = {
-  paper: "Paper",
-  project: "Project",
-  tool: "Tool",
-  community: "Community",
-  framework: "Framework",
-  guide: "Guide"
-};
+const TYPE_LABELS = { paper: "Paper", project: "Project", tool: "Tool", community: "Community", framework: "Framework", guide: "Guide" };
+
+function getCurrentPage() {
+  return document.body.getAttribute("data-page") || "index";
+}
+
+function renderNav() {
+  const current = getCurrentPage();
+  const homeLink = `<a href="index.html" class="nav-link ${current === "index" ? "active" : ""}">Home</a>`;
+  const catLinks = CATEGORIES.map(cat =>
+    `<a href="${cat.id}.html" class="nav-link ${current === cat.id ? "active" : ""}">${cat.title}</a>`
+  ).join("");
+  document.getElementById("nav-links").innerHTML = homeLink + catLinks;
+}
 
 function renderCard(resource) {
   const typeLabel = TYPE_LABELS[resource.type] || resource.type;
@@ -56,59 +37,42 @@ function renderCard(resource) {
         <a href="${resource.url}" target="_blank" rel="noopener noreferrer">${resource.title}</a>
       </h3>
       <p class="card-description">${resource.description}</p>
-    </article>
-  `;
+    </article>`;
 }
 
-function renderSection(category) {
-  const resources = RESOURCES.filter(r => r.category === category.id);
-  if (resources.length === 0) return "";
-
-  const cards = resources.map(renderCard).join("");
-
-  return `
-    <section class="category-section" id="${category.id}">
-      <div class="section-inner">
-        <div class="section-header">
-          <h2 class="section-title">${category.title}</h2>
-          <p class="section-description">${category.description}</p>
-        </div>
-        <div class="cards-grid">
-          ${cards}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-function renderNav() {
-  const links = CATEGORIES.map(cat =>
-    `<a href="#${cat.id}" class="nav-link">${cat.title}</a>`
-  ).join("");
-
-  document.getElementById("nav-links").innerHTML = links;
-}
-
-function renderAll() {
+function renderHomePage() {
   const main = document.getElementById("main-content");
-  main.innerHTML = CATEGORIES.map(renderSection).join("");
+  const cards = CATEGORIES.map(cat => {
+    const count = RESOURCES.filter(r => r.category === cat.id && r.published !== false).length;
+    return `
+      <a href="${cat.id}.html" class="category-card">
+        <h2 class="category-card-title">${cat.title}</h2>
+        <p class="category-card-description">${cat.description}</p>
+        <span class="category-card-cta">Explore ${count} resources &rarr;</span>
+      </a>`;
+  }).join("");
+  main.innerHTML = `<section class="categories-overview" id="categories"><div class="overview-inner"><div class="category-grid">${cards}</div></div></section>`;
 }
 
-function initScrollSpy() {
-  const sections = document.querySelectorAll(".category-section");
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => link.classList.remove("active"));
-        const activeLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
-        if (activeLink) activeLink.classList.add("active");
-      }
-    });
-  }, { rootMargin: "-30% 0px -60% 0px" });
-
-  sections.forEach(section => observer.observe(section));
+function renderCategoryPage(categoryId) {
+  const category = CATEGORIES.find(c => c.id === categoryId);
+  if (!category) return;
+  const resources = RESOURCES.filter(r => r.category === categoryId && r.published !== false);
+  const isAccent = categoryId === "before-you-continue";
+  const main = document.getElementById("main-content");
+  main.innerHTML = `
+    <div class="page-header${isAccent ? " page-header--accent" : ""}">
+      <div class="page-header-inner">
+        <a href="index.html" class="back-link">&larr; All Categories</a>
+        <h1 class="page-title">${category.title}</h1>
+        <p class="page-description">${category.description}</p>
+      </div>
+    </div>
+    <section class="page-resources${isAccent ? " page-resources--accent" : ""}" aria-label="${category.title} resources">
+      <div class="section-inner">
+        <div class="cards-grid">${resources.map(renderCard).join("")}</div>
+      </div>
+    </section>`;
 }
 
 function initMobileMenu() {
@@ -117,20 +81,17 @@ function initMobileMenu() {
   if (toggle && navLinks) {
     toggle.addEventListener("click", () => {
       navLinks.classList.toggle("open");
-      toggle.setAttribute("aria-expanded",
-        navLinks.classList.contains("open") ? "true" : "false"
-      );
+      toggle.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
     });
-    // Close on link click
-    navLinks.querySelectorAll && document.querySelectorAll(".nav-link").forEach(link => {
+    document.querySelectorAll(".nav-link").forEach(link => {
       link.addEventListener("click", () => navLinks.classList.remove("open"));
     });
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const page = getCurrentPage();
   renderNav();
-  renderAll();
-  initScrollSpy();
+  if (page === "index") { renderHomePage(); } else { renderCategoryPage(page); }
   initMobileMenu();
 });
