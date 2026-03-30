@@ -26,45 +26,39 @@
         Not all AI tools carry the same risk to your data. This framework is specific to the threat model facing tribal nations: federal government access to community data. Where your query goes, and who can legally compel access to it, determines the risk tier. This is a sovereignty argument, not a capability argument.
       </p>
       <div class="risk-diagram" role="img" aria-label="Hierarchy of data risk from highest to lowest: US free models, US paid models, guardrailed managed AI, self-hosted tribal infrastructure, local networked AI, local air-gapped AI">
-        <svg width="100%" viewBox="0 0 680 310">
-          <text class="risk-label-top" x="40" y="16" font-size="12" fill="currentColor" opacity="0.6">Higher data risk</text>
+        <svg width="100%" viewBox="0 0 640 300">
+          <text x="20" y="14" font-size="11" fill="currentColor" opacity="0.55">Higher data risk</text>
           <g>
-            <rect x="40" y="26" width="600" height="40" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
-            <text x="60" y="46" font-size="14" font-weight="500" fill="#A32D2D" dominant-baseline="central">1</text>
-            <text x="90" y="46" font-size="14" fill="#A32D2D" dominant-baseline="central">US-based free AI models</text>
-            <text x="636" y="46" font-size="11" fill="#A32D2D" dominant-baseline="central" opacity="0.75">inputs used for training, no legal protections</text>
+            <rect x="20" y="22" width="600" height="36" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
+            <text x="38" y="40" font-size="13" font-weight="500" fill="#A32D2D" dominant-baseline="central">1</text>
+            <text x="62" y="40" font-size="13" fill="#A32D2D" dominant-baseline="central">US-based free AI models</text>
           </g>
           <g>
-            <rect x="40" y="72" width="600" height="40" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
-            <text x="60" y="92" font-size="14" font-weight="500" fill="#A32D2D" dominant-baseline="central">2</text>
-            <text x="90" y="92" font-size="14" fill="#A32D2D" dominant-baseline="central">US-based paid AI models</text>
-            <text x="636" y="92" font-size="11" fill="#A32D2D" dominant-baseline="central" opacity="0.75">stronger contracts, still US jurisdiction</text>
+            <rect x="20" y="64" width="600" height="36" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
+            <text x="38" y="82" font-size="13" font-weight="500" fill="#A32D2D" dominant-baseline="central">2</text>
+            <text x="62" y="82" font-size="13" fill="#A32D2D" dominant-baseline="central">US-based paid AI models</text>
           </g>
           <g>
-            <rect x="40" y="118" width="600" height="40" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
-            <text x="60" y="138" font-size="14" font-weight="500" fill="#444441" dominant-baseline="central">3</text>
-            <text x="90" y="138" font-size="14" fill="#444441" dominant-baseline="central">Guardrailed / managed AI (e.g. Copilot Enterprise)</text>
-            <text x="636" y="138" font-size="11" fill="#444441" dominant-baseline="central" opacity="0.75">contractual, not technical — verify terms</text>
+            <rect x="20" y="106" width="600" height="36" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+            <text x="38" y="124" font-size="13" font-weight="500" fill="#444441" dominant-baseline="central">3</text>
+            <text x="62" y="124" font-size="13" fill="#444441" dominant-baseline="central">Guardrailed / managed AI (e.g. Copilot Enterprise)</text>
           </g>
           <g>
-            <rect x="40" y="164" width="600" height="40" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
-            <text x="60" y="184" font-size="14" font-weight="500" fill="#444441" dominant-baseline="central">4</text>
-            <text x="90" y="184" font-size="14" fill="#444441" dominant-baseline="central">Self-hosted on tribal infrastructure</text>
-            <text x="636" y="184" font-size="11" fill="#444441" dominant-baseline="central" opacity="0.75">community-controlled network, requires capacity</text>
+            <rect x="20" y="148" width="600" height="36" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+            <text x="38" y="166" font-size="13" font-weight="500" fill="#444441" dominant-baseline="central">4</text>
+            <text x="62" y="166" font-size="13" fill="#444441" dominant-baseline="central">Self-hosted on tribal infrastructure</text>
           </g>
           <g>
-            <rect x="40" y="210" width="600" height="40" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
-            <text x="60" y="230" font-size="14" font-weight="500" fill="#085041" dominant-baseline="central">5</text>
-            <text x="90" y="230" font-size="14" fill="#085041" dominant-baseline="central">Local AI — networked machine</text>
-            <text x="636" y="230" font-size="11" fill="#085041" dominant-baseline="central" opacity="0.75">data stays on device, OS still connects out</text>
+            <rect x="20" y="190" width="600" height="36" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
+            <text x="38" y="208" font-size="13" font-weight="500" fill="#085041" dominant-baseline="central">5</text>
+            <text x="62" y="208" font-size="13" fill="#085041" dominant-baseline="central">Local AI — networked machine</text>
           </g>
           <g>
-            <rect x="40" y="256" width="600" height="40" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
-            <text x="60" y="276" font-size="14" font-weight="500" fill="#085041" dominant-baseline="central">6</text>
-            <text x="90" y="276" font-size="14" fill="#085041" dominant-baseline="central">Local AI — air-gapped machine</text>
-            <text x="636" y="276" font-size="11" fill="#085041" dominant-baseline="central" opacity="0.75">no outbound traffic possible</text>
+            <rect x="20" y="232" width="600" height="36" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
+            <text x="38" y="250" font-size="13" font-weight="500" fill="#085041" dominant-baseline="central">6</text>
+            <text x="62" y="250" font-size="13" fill="#085041" dominant-baseline="central">Local AI — air-gapped machine</text>
           </g>
-          <text x="40" y="306" font-size="12" fill="currentColor" opacity="0.6">Lower data risk</text>
+          <text x="20" y="286" font-size="11" fill="currentColor" opacity="0.55">Lower data risk</text>
         </svg>
       </div>
       <div class="risk-notes">
