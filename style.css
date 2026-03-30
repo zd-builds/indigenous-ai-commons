@@ -207,10 +207,6 @@ a:hover { color:var(--accent-hover); }
 .risk-notes p { font-size: 0.9rem; line-height: 1.8; color: var(--text-secondary); max-width: 720px; margin-bottom: 0.9rem; }
 .risk-notes p:last-child { margin-bottom: 0; }
 .risk-notes strong { color: var(--text); font-weight: 600; }
-
-@media (max-width: 768px) {
-  .risk-diagram svg text[x="636"] { display: none; }
-}
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
 
 /* Safer AI Practices — question card format */
