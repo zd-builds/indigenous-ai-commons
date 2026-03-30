@@ -21,8 +21,9 @@ function renderNav() {
   const catLinks = CATEGORIES.map(cat =>
     `<a href="${cat.id}.html" class="nav-link ${current === cat.id ? "active" : ""}">${cat.title}</a>`
   ).join("");
+  const getStartedLink = `<a href="get-started.html" class="nav-link nav-link--highlight ${current === "get-started" || current.startsWith("gs-") ? "active" : ""}">Get Started</a>`;
   const aboutLink = `<a href="about.html" class="nav-link ${current === "about" ? "active" : ""}">About</a>`;
-  document.getElementById("nav-links").innerHTML = homeLink + catLinks + aboutLink;
+  document.getElementById("nav-links").innerHTML = homeLink + catLinks + getStartedLink + aboutLink;
 }
 
 function renderCard(resource) {
@@ -105,6 +106,6 @@ function initMobileMenu() {
 document.addEventListener("DOMContentLoaded", () => {
   const page = getCurrentPage();
   renderNav();
-  if (page === "index") { renderHomePage(); } else { renderCategoryPage(page); }
+  if (page === "index") { renderHomePage(); } else if (page !== "get-started" && !page.startsWith("gs-") && page !== "about") { renderCategoryPage(page); }
   initMobileMenu();
 });

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Hallucinations — Indigenous AI Commons</title>
+  <meta name="description" content="What AI hallucinations are, why they happen, and where the risk actually lies for tribal teams." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="gs-hallucinations">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Indigenous AI Commons</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">&#9776;</button>
+      <div id="nav-links" role="list"></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <a href="get-started.html" class="back-link">&larr; Get Started</a>
+      <h1 class="page-title">AI Hallucinations</h1>
+      <p class="page-description">
+        What they are, why they happen, where they are actually useful, and how to work with them responsibly.
+      </p>
+    </div>
+  </div>
+
+  <main id="main-content" aria-label="AI Hallucinations">
+    <div class="prose-page">
+      <div class="prose-inner">
+
+        <h2>What hallucinations are</h2>
+
+        <p>
+          Large language models generate text by predicting what comes next based on patterns in training data. When a model produces confident, plausible-sounding output that is not grounded in fact or source material, that is a hallucination. It is a structural feature of how these systems work, not a fixable bug.
+        </p>
+
+        <h2>Why they happen</h2>
+
+        <p>
+          Models are optimized to produce fluent, coherent text, not to flag uncertainty. They do not know what they do not know. The same mechanism that makes them useful for synthesis and generation also makes them capable of fabricating citations, statistics, names, and events with equal confidence. There is no internal alarm that fires when the model is wrong.
+        </p>
+
+        <h2>The real risks</h2>
+
+        <ul>
+          <li>Legal, medical, or scientific claims that sound authoritative but are wrong</li>
+          <li>Citations to sources that do not exist</li>
+          <li>Compounding errors when hallucinated output is fed back into further queries</li>
+          <li>Harder to catch when the audience lacks domain expertise: the model sounds confident regardless of accuracy</li>
+        </ul>
+
+        <h2>Where hallucinations are actually useful</h2>
+
+        <p>
+          Not all generative drift is harmful. Hallucination is a feature in contexts where strict factual accuracy is not the goal:
+        </p>
+
+        <ul>
+          <li><strong>Brainstorming and ideation</strong>, where unexpected connections have value</li>
+          <li><strong>Scenario and futures planning</strong>, projecting possibilities rather than retrieving facts</li>
+          <li><strong>Bridging across fields</strong> by synthesizing concepts from disparate knowledge bodies</li>
+          <li><strong>First-draft generation</strong> where accuracy is refined in subsequent steps</li>
+        </ul>
+
+        <h2>How RAG changes the risk profile</h2>
+
+        <p>
+          Retrieval-augmented generation (RAG) grounds model output in a defined document corpus. The model can still hallucinate, but responses can be traced back to source material. You know what documents exist, where they live, and whether the output is supported. Auditability becomes possible, which is a meaningful shift for government work.
+        </p>
+
+        <p>
+          RAG does not eliminate hallucination. It changes the relationship between output and evidence. That difference matters for accountability.
+        </p>
+
+        <div class="prose-callout">
+          <p>
+            <strong>A useful rule of thumb:</strong> Do not use AI for topics where you have no background. Use it to enhance what you already understand. Without baseline knowledge, you cannot catch hallucinations. The model sounds confident regardless of accuracy. Domain expertise is what makes output auditable. For tribal teams, that means using AI on data processing and report generation where you can verify outputs, not on regulatory interpretation or legal analysis where you cannot.
+          </p>
+        </div>
+
+        <h2>The sovereignty dimension</h2>
+
+        <p>
+          A hallucinated response about community data that never left local infrastructure is a different problem than one logged on an external server. Accuracy and sovereignty are separate concerns. Both matter, and conflating them obscures what local deployment actually solves.
+        </p>
+
+        <p>
+          Local models reduce the sovereignty risk. They do not eliminate the accuracy risk. Both require attention.
+        </p>
+
+        <nav class="prose-nav" aria-label="Topic navigation">
+          <a href="gs-federal-risk.html">&larr; Previous: Indigenous Data &amp; Federal Risk</a>
+          <a href="gs-local-models.html" class="prose-nav-next">Next: Local Models &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Indigenous AI Commons</div>
+        <p class="footer-tagline">A living index of resources on AI, data sovereignty, and community-led technology. Built for Indigenous communities. Useful to anyone who approaches this work with respect.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="indigenous-built-ai.html" class="footer-link">Indigenous-Built AI</a>
+        <a href="community-solutions.html" class="footer-link">Community Solutions</a>
+        <a href="data-as-culture.html" class="footer-link">Data as Culture</a>
+        <a href="academic-research.html" class="footer-link">Academic Research</a>
+        <a href="global-resources.html" class="footer-link">Global Resources</a>
+        <a href="safer-ai-practices.html" class="footer-link">Safer AI Practices</a>
+        <a href="get-started.html" class="footer-link">Get Started</a>
+      </nav>
+      <div class="footer-submit">
+        <p>Know of a resource that belongs here?</p>
+        <p><a href="mailto:zam.deshields@gmail.com?subject=Indigenous%20AI%20Commons%20Submission">Submit a resource &rarr;</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Indigenous AI Commons &mdash; built by <a href="https://www.linkedin.com/in/zam-deshields" class="footer-byline-link" target="_blank" rel="noopener noreferrer">Zam DeShields</a> &middot; <a href="about.html" class="footer-byline-link">About</a></span>
+      <span>Resources belong to their authors. This index belongs to the commons.</span>
+    </div>
+  </footer>
+
+  <script src="resources.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

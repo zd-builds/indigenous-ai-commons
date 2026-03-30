@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Models: Capability and Tradeoffs — Indigenous AI Commons</title>
+  <meta name="description" content="Hardware requirements, capability gaps, and how to improve local AI for tribal government work." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="gs-local-models">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Indigenous AI Commons</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">&#9776;</button>
+      <div id="nav-links" role="list"></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <a href="get-started.html" class="back-link">&larr; Get Started</a>
+      <h1 class="page-title">Local Models: Capability and Tradeoffs</h1>
+      <p class="page-description">
+        What the gap between local and cloud AI actually means, what hardware you need, and how to close the gap for the work your teams do.
+      </p>
+    </div>
+  </div>
+
+  <main id="main-content" aria-label="Local Models: Capability and Tradeoffs">
+    <div class="prose-page">
+      <div class="prose-inner">
+
+        <p>
+          Cloud-based models like ChatGPT and Claude are trained on massive datasets using computing infrastructure most organizations could never run locally. Local models are smaller by necessity: they have to fit and run on hardware you own. That size difference has real consequences for output quality, but the gap is narrowing fast and is often overstated for the kinds of tasks teams need to perform.
+        </p>
+
+        <h2>What "smaller" actually means</h2>
+
+        <ul>
+          <li>
+            Models are measured in parameters, the numerical weights that determine how a model reasons. Larger parameter counts generally mean better reasoning and more nuanced outputs.
+          </li>
+          <li>
+            Cloud models run in the hundreds of billions of parameters. A capable local model runs 7 to 70 billion. For creative synthesis or complex reasoning across unfamiliar domains, that gap shows. For writing R documentation, explaining legacy code, or drafting report sections from structured data, local models perform well.
+          </li>
+          <li>
+            Models also have a context window, a limit on how much text they can hold in working memory at once. Smaller local models have shorter context windows, meaning they can lose track of earlier content in long documents. Chunking, breaking documents into smaller, overlapping segments, is the primary mitigation.
+          </li>
+        </ul>
+
+        <h2>Hardware required</h2>
+
+        <ul>
+          <li>
+            <strong>Small models (7 to 14 billion parameters):</strong> Run on a standard laptop or mini PC with 16GB of RAM. No GPU required, though one helps with speed. Entry-level setup.
+          </li>
+          <li>
+            <strong>Medium models (30 to 40 billion parameters):</strong> Require 32GB or more RAM. A workstation or a well-specced mini PC. Noticeably more capable on complex tasks.
+          </li>
+          <li>
+            <strong>Large models (70 billion parameters):</strong> Require 48GB or more of unified memory or GPU VRAM. A Mac Mini M4 Pro with 48GB of unified memory (around $2,000) or a workstation with a high-end GPU reaches this threshold. Generates roughly 15 to 20 tokens per second: slower than cloud tools but functional for document querying and drafting.
+          </li>
+          <li>
+            <strong>Models are free to download.</strong> The only cost is hardware and electricity.
+          </li>
+        </ul>
+
+        <h2>How to make local models better</h2>
+
+        <ul>
+          <li>
+            <strong>RAG (Retrieval-Augmented Generation):</strong> Rather than loading entire documents into the model, RAG retrieves only the most relevant chunks before generating a response. This extends effective context, reduces errors, and makes outputs traceable to source documents. It is the most practical improvement for document-heavy workflows.
+          </li>
+          <li>
+            <strong>Prompt engineering:</strong> Local models respond well to explicit, structured prompts. Providing context, specifying output format, and giving examples improves output quality significantly without changing the model itself.
+          </li>
+          <li>
+            <strong>Model selection:</strong> Quantized models, compressed versions that trade minor accuracy for dramatically reduced hardware requirements, have closed the gap with older, larger models. Choosing the right model for the task matters more than raw parameter count.
+          </li>
+          <li>
+            <strong>Fine-tuning:</strong> A model can be trained further on domain-specific data, water quality reports, tribal resolutions, regulatory documents, to improve performance on that specific content. This requires technical expertise and is not a starting point, but it is achievable with moderate infrastructure.
+          </li>
+        </ul>
+
+        <h2>Open-source tools for getting started</h2>
+
+        <ul>
+          <li>
+            <strong><a href="https://ollama.com" target="_blank" rel="noopener noreferrer">Ollama</a></strong> is the most accessible way to download and run open-source models locally. Free, runs on Mac, Windows, and Linux. One command installs a model; another runs it. Can be configured to serve an entire local network, not just a single machine.
+          </li>
+          <li>
+            <strong><a href="https://openwebui.com" target="_blank" rel="noopener noreferrer">Open WebUI</a></strong> is a browser-based chat interface that connects to Ollama. Gives non-technical users a familiar chat experience without touching a command line. Runs entirely on your own hardware.
+          </li>
+          <li>
+            <strong><a href="https://lmstudio.ai" target="_blank" rel="noopener noreferrer">LM Studio</a></strong> is a graphical interface for downloading and running local models. A good starting point for teams without command-line experience.
+          </li>
+        </ul>
+
+        <div class="prose-sources">
+          <h2>Sources</h2>
+          <ul>
+            <li>
+              Local LLM deployment privacy guide, evaluating Ollama, LM Studio, vLLM, and llama.cpp:
+              <a href="https://www.digitalapplied.com/blog/local-llm-deployment-privacy-guide-2025" target="_blank" rel="noopener noreferrer">Digital Applied, 2025</a>
+            </li>
+            <li>
+              Full list of freely downloadable open-source models with size and hardware requirements:
+              <a href="https://ollama.com/library" target="_blank" rel="noopener noreferrer">Ollama Model Library</a>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="prose-nav" aria-label="Topic navigation">
+          <a href="gs-hallucinations.html">&larr; Previous: AI Hallucinations</a>
+          <a href="get-started.html" class="prose-nav-next">Back to Get Started &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Indigenous AI Commons</div>
+        <p class="footer-tagline">A living index of resources on AI, data sovereignty, and community-led technology. Built for Indigenous communities. Useful to anyone who approaches this work with respect.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="indigenous-built-ai.html" class="footer-link">Indigenous-Built AI</a>
+        <a href="community-solutions.html" class="footer-link">Community Solutions</a>
+        <a href="data-as-culture.html" class="footer-link">Data as Culture</a>
+        <a href="academic-research.html" class="footer-link">Academic Research</a>
+        <a href="global-resources.html" class="footer-link">Global Resources</a>
+        <a href="safer-ai-practices.html" class="footer-link">Safer AI Practices</a>
+        <a href="get-started.html" class="footer-link">Get Started</a>
+      </nav>
+      <div class="footer-submit">
+        <p>Know of a resource that belongs here?</p>
+        <p><a href="mailto:zam.deshields@gmail.com?subject=Indigenous%20AI%20Commons%20Submission">Submit a resource &rarr;</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Indigenous AI Commons &mdash; built by <a href="https://www.linkedin.com/in/zam-deshields" class="footer-byline-link" target="_blank" rel="noopener noreferrer">Zam DeShields</a> &middot; <a href="about.html" class="footer-byline-link">About</a></span>
+      <span>Resources belong to their authors. This index belongs to the commons.</span>
+    </div>
+  </footer>
+
+  <script src="resources.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
