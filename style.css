@@ -198,10 +198,18 @@ a:hover { color:var(--accent-hover); }
 .prose-nav a:hover { color: var(--accent-hover); text-decoration: underline; }
 .prose-nav-next { margin-left: auto; }
 
+/* Hierarchy of Risk explainer */
+.risk-explainer { background: var(--bg); padding: var(--section-pad); border-top: 1px solid var(--border-light); }
+.risk-explainer-inner { max-width: var(--max-width); margin: 0 auto; }
+.risk-heading { font-size: 1.4rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; margin-bottom: 0.75rem; }
+.risk-intro { font-size: 1rem; line-height: 1.8; color: var(--text-secondary); max-width: 680px; margin-bottom: 2rem; }
+.risk-diagram { margin-bottom: 2rem; }
+.risk-notes p { font-size: 0.9rem; line-height: 1.8; color: var(--text-secondary); max-width: 720px; margin-bottom: 0.9rem; }
+.risk-notes p:last-child { margin-bottom: 0; }
+.risk-notes strong { color: var(--text); font-weight: 600; }
+
 @media (max-width: 768px) {
-  .gs-grid { padding: 3rem 1.25rem; }
-  .gs-grid-inner { grid-template-columns: 1fr; }
-  .prose-page { padding: 3rem 1.25rem 4rem; }
+  .risk-diagram svg text[x="636"] { display: none; }
 }
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
 
