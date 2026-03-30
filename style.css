@@ -157,6 +157,52 @@ a:hover { color:var(--accent-hover); }
   .btn { width:100%; justify-content:center; }
 }
 :focus-visible { outline:2px solid var(--accent-light); outline-offset:3px; }
+
+/* Get Started nav highlight */
+.nav-link--highlight { color: var(--accent-light) !important; font-weight: 600; }
+.nav-link--highlight:hover, .nav-link--highlight.active { background: rgba(26,140,138,0.15) !important; color: #fff !important; }
+
+/* Get Started hub — topic cards */
+.gs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 1.5rem; padding: var(--section-pad); }
+.gs-grid-inner { max-width: var(--max-width); margin: 0 auto; }
+.gs-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.15s, border-color 0.15s; box-shadow: var(--shadow); }
+.gs-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); border-color: var(--accent); color: inherit; }
+.gs-card--coming { opacity: 0.55; cursor: default; }
+.gs-card--coming:hover { box-shadow: var(--shadow); transform: none; border-color: var(--border); }
+.gs-card-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.75rem; }
+.gs-card-title { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; line-height: 1.25; letter-spacing: -0.01em; }
+.gs-card-desc { font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); flex: 1; margin-bottom: 1.25rem; }
+.gs-card-cta { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+.gs-card--coming .gs-card-cta { color: var(--text-muted); }
+
+/* Prose content pages (gs-* sub-pages) */
+.prose-page { padding: 4rem 1.5rem 5rem; background: var(--bg); }
+.prose-inner { max-width: 720px; margin: 0 auto; }
+.prose-inner h2 { font-size: 1.4rem; font-weight: 700; color: var(--text); margin: 2.5rem 0 0.75rem; letter-spacing: -0.01em; line-height: 1.2; }
+.prose-inner h2:first-child { margin-top: 0; }
+.prose-inner p { font-size: 1rem; line-height: 1.85; color: var(--text-secondary); margin-bottom: 1.1rem; }
+.prose-inner ul { padding-left: 1.4rem; margin-bottom: 1.25rem; }
+.prose-inner li { font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.4rem; }
+.prose-inner strong { color: var(--text); font-weight: 600; }
+.prose-inner a { color: var(--accent); }
+.prose-inner a:hover { color: var(--accent-hover); }
+.prose-callout { background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+.prose-callout p { margin-bottom: 0; font-size: 0.95rem; }
+.prose-sources { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-light); }
+.prose-sources h2 { font-size: 1rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+.prose-sources ul { list-style: none; padding: 0; }
+.prose-sources li { font-size: 0.875rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 0.6rem; padding-left: 1rem; border-left: 2px solid var(--border); }
+.prose-sources a { color: var(--accent); word-break: break-all; }
+.prose-nav { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-light); }
+.prose-nav a { font-size: 0.875rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+.prose-nav a:hover { color: var(--accent-hover); text-decoration: underline; }
+.prose-nav-next { margin-left: auto; }
+
+@media (max-width: 768px) {
+  .gs-grid { padding: 3rem 1.25rem; }
+  .gs-grid-inner { grid-template-columns: 1fr; }
+  .prose-page { padding: 3rem 1.25rem 4rem; }
+}
 @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:0.01ms !important; transition-duration:0.01ms !important; } }
 
 /* Safer AI Practices — question card format */

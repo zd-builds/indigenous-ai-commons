@@ -55,6 +55,17 @@ const RESOURCES = [
     published: true
   },
 
+  {
+    id: "skobots",
+    title: "SkoBots — Indigenous Language Revitalization Robot",
+    url: "https://www.steamconnection.org/skobots",
+    type: "project",
+    category: "indigenous-built-ai",
+    description: "Wearable, AI-powered robots designed to teach endangered Indigenous languages to youth. Built by Danielle Boyer (Ojibwe, Sault Ste Marie Tribe of Chippewa Indians), distributed free to tribal schools and Indigenous organizations. Uses internally-developed AI that functions without Wi-Fi, designed for communities with limited connectivity.",
+    region: "United States",
+    published: true
+  },
+
   // COMMUNITY SOLUTIONS
 
   {
@@ -125,6 +136,17 @@ const RESOURCES = [
     category: "community-solutions",
     description: "Technology tools supporting Indigenous and local communities in monitoring and stewarding their lands and waters, with community-controlled data and decision-making.",
     region: "Global",
+    published: true
+  },
+
+  {
+    id: "cherokee-ai-policy-doc",
+    title: "Cherokee Nation AI Policy — Full Document",
+    url: "https://www.cherokee.org/media/fo4pcqvz/cherokee-nation-information-technology-artificial-intelligence-ai-policy.pdf",
+    type: "framework",
+    category: "community-solutions",
+    description: "The policy document signed by Principal Chief Chuck Hoskin Jr. in August 2025 — one of the first comprehensive tribal AI governance frameworks. Covers approved uses, cultural protections (Cherokee language requires fluent speaker oversight), governance committee structure, and data protection requirements. A working model other nations can adapt.",
+    region: "United States",
     published: true
   },
 
@@ -310,6 +332,27 @@ const RESOURCES = [
     type: "paper",
     category: "academic-research",
     description: "Academic analysis of Indigenous data sovereignty within technology regulation frameworks, examining the gaps between existing law and the rights communities actually hold.",
+    region: "Global",
+    published: true
+  },
+
+  {
+    id: "making-kin-machines",
+    title: "Making Kin with the Machines",
+    url: "https://jods.mitpress.mit.edu/pub/lewis-arista-pechawis-kite/release/1",
+    type: "paper",
+    category: "academic-research",
+    description: "Award-winning 2018 essay by Jason Edward Lewis, Noelani Arista, Archer Pechawis, and Suzanne Kite in MIT Press Journal of Design and Science. Proposes drawing on Indigenous kinship protocols to reimagine the epistemological foundations of AI — arguing that centering human well-being alone is too narrow and that AI belongs within an extended circle of relationships.",
+    region: "Global",
+    published: true
+  },
+  {
+    id: "abundant-intelligences-site",
+    title: "Abundant Intelligences — Research Program",
+    url: "https://abundant-intelligences.net/",
+    type: "project",
+    category: "academic-research",
+    description: "Indigenous-led, Indigenous-majority international research program imagining how AI could be conceptualized and designed from Indigenous knowledge systems. Led by Jason Edward Lewis (Concordia University) in partnership with Mila Quebec AI Institute. A $22M SSHRC-funded initiative.",
     region: "Global",
     published: true
   },
