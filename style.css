@@ -242,3 +242,31 @@ a:hover { color:var(--accent-hover); }
   border-top: 1px solid rgba(255,255,255,0.15);
 }
 .card-resource-link:hover { color: #fff; text-decoration: underline; }
+
+/* ── Dropdown nav ────────────────────────────────────────────────────────── */
+.nav-dropdown { position: relative; display: inline-flex; align-items: center; }
+.nav-dropdown-toggle { background: none; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; }
+.nav-dropdown-toggle.active, .nav-dropdown.active .nav-dropdown-toggle { background: rgba(255,255,255,0.1); color: var(--text-inverse); }
+.dropdown-caret { font-size: 0.7em; transition: transform 0.15s; }
+.nav-dropdown:hover .dropdown-caret { transform: rotate(180deg); }
+.nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 4px); right: 0; background: var(--bg-hero); border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; min-width: 200px; padding: 0.4rem 0; z-index: 200; box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-item { display: block; padding: 0.45rem 1rem; font-size: 0.8rem; border-radius: 0; }
+.nav-dropdown-item:hover, .nav-dropdown-item.active { background: rgba(255,255,255,0.1); }
+
+/* ── Breadcrumb ──────────────────────────────────────────────────────────── */
+.breadcrumb { background: rgba(0,0,0,0.08); border-bottom: 1px solid rgba(0,0,0,0.07); }
+.breadcrumb-inner { max-width: var(--max-width); margin: 0 auto; padding: 0.5rem 1.5rem; font-size: 0.8rem; display: flex; align-items: center; gap: 0.5rem; }
+.breadcrumb-link { color: var(--accent); text-decoration: none; }
+.breadcrumb-link:hover { text-decoration: underline; }
+.breadcrumb-sep { color: var(--text-muted, #888); }
+.breadcrumb-current { color: var(--text-muted, #888); }
+
+/* ── Mobile dropdown override ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nav-dropdown { display: flex; flex-direction: column; width: 100%; }
+  .nav-dropdown-toggle { justify-content: space-between; width: 100%; font-size: 0.9rem; padding: 0.6rem 0.8rem; }
+  .nav-dropdown-menu { display: flex !important; position: static; background: transparent; border: none; box-shadow: none; padding: 0 0 0.25rem 0.75rem; min-width: unset; border-left: 2px solid rgba(255,255,255,0.15); margin: 0.1rem 0 0.25rem 0.8rem; }
+  .nav-dropdown-item { font-size: 0.85rem; padding: 0.45rem 0.6rem; }
+  .dropdown-caret { display: none; }
+}
