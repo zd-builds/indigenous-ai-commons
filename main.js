@@ -9,6 +9,12 @@ const CATEGORIES = [
   { id: "global-resources",     title: "Global Resources",     description: "International examples, frameworks, and voices." }
 ];
 
+const GS_TITLES = {
+  "gs-federal-risk":   "Federal Risk",
+  "gs-hallucinations": "Hallucinations",
+  "gs-local-models":   "Local Models"
+};
+
 const TYPE_LABELS = { paper: "Paper", project: "Project", tool: "Tool", community: "Community", framework: "Framework", guide: "Guide" };
 
 function getCurrentPage() {
@@ -17,13 +23,38 @@ function getCurrentPage() {
 
 function renderNav() {
   const current = getCurrentPage();
+  const isCategory = CATEGORIES.some(c => c.id === current);
+
   const homeLink = `<a href="index.html" class="nav-link ${current === "index" ? "active" : ""}">Home</a>`;
-  const catLinks = CATEGORIES.map(cat =>
-    `<a href="${cat.id}.html" class="nav-link ${current === cat.id ? "active" : ""}">${cat.title}</a>`
+
+  const dropdownItems = CATEGORIES.map(cat =>
+    `<a href="${cat.id}.html" class="nav-link nav-dropdown-item ${current === cat.id ? "active" : ""}" role="menuitem">${cat.title}</a>`
   ).join("");
+
+  const resourcesDropdown = `
+    <div class="nav-dropdown${isCategory ? " active" : ""}">
+      <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+        Resources <span class="dropdown-caret" aria-hidden="true">&#9660;</span>
+      </button>
+      <div class="nav-dropdown-menu" role="menu">${dropdownItems}</div>
+    </div>`;
+
   const getStartedLink = `<a href="get-started.html" class="nav-link nav-link--highlight ${current === "get-started" || current.startsWith("gs-") ? "active" : ""}">Get Started</a>`;
   const aboutLink = `<a href="about.html" class="nav-link ${current === "about" ? "active" : ""}">About</a>`;
-  document.getElementById("nav-links").innerHTML = homeLink + catLinks + getStartedLink + aboutLink;
+
+  document.getElementById("nav-links").innerHTML = homeLink + resourcesDropdown + getStartedLink + aboutLink;
+}
+
+function renderBreadcrumb() {
+  const current = getCurrentPage();
+  if (!current.startsWith("gs-")) return;
+  const title = GS_TITLES[current] || current;
+  const bc = document.createElement("div");
+  bc.className = "breadcrumb";
+  bc.setAttribute("aria-label", "Breadcrumb");
+  bc.innerHTML = `<div class="breadcrumb-inner"><a href="get-started.html" class="breadcrumb-link">&larr; Get Started</a><span class="breadcrumb-sep" aria-hidden="true"> / </span><span class="breadcrumb-current">${title}</span></div>`;
+  const pageHeader = document.querySelector(".page-header");
+  if (pageHeader) pageHeader.parentNode.insertBefore(bc, pageHeader);
 }
 
 function renderCard(resource) {
@@ -92,20 +123,26 @@ function renderCategoryPage(categoryId) {
 function initMobileMenu() {
   const toggle = document.getElementById("nav-toggle");
   const navLinks = document.getElementById("nav-links");
-  if (toggle && navLinks) {
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
-    });
-    document.querySelectorAll(".nav-link").forEach(link => {
-      link.addEventListener("click", () => navLinks.classList.remove("open"));
-    });
-  }
+  if (!toggle || !navLinks) return;
+
+  toggle.addEventListener("click", () => {
+    navLinks.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
+  });
+
+  document.querySelectorAll(".nav-link:not(.nav-dropdown-toggle)").forEach(link => {
+    link.addEventListener("click", () => navLinks.classList.remove("open"));
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const page = getCurrentPage();
   renderNav();
-  if (page === "index") { renderHomePage(); } else if (page !== "get-started" && !page.startsWith("gs-") && page !== "about") { renderCategoryPage(page); }
+  renderBreadcrumb();
+  if (page === "index") {
+    renderHomePage();
+  } else if (page !== "get-started" && !page.startsWith("gs-") && page !== "about") {
+    renderCategoryPage(page);
+  }
   initMobileMenu();
 });
