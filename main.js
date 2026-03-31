@@ -39,7 +39,7 @@ function renderNav() {
       <div class="nav-dropdown-menu" role="menu">${dropdownItems}</div>
     </div>`;
 
-  const getStartedLink = `<a href="get-started.html" class="nav-link nav-link--highlight ${current === "get-started" || current.startsWith("gs-") ? "active" : ""}">Get Started</a>`;
+  const getStartedLink = `<a href="get-started.html" class="nav-link nav-link--highlight ${current === "get-started" || current.startsWith("gs-") ? "active" : ""}">Go Deeper</a>`;
   const aboutLink = `<a href="about.html" class="nav-link ${current === "about" ? "active" : ""}">About</a>`;
 
   document.getElementById("nav-links").innerHTML = homeLink + resourcesDropdown + getStartedLink + aboutLink;
