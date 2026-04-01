@@ -163,8 +163,8 @@ a:hover { color:var(--accent-hover); }
 .nav-link--highlight:hover, .nav-link--highlight.active { background: rgba(26,140,138,0.15) !important; color: #fff !important; }
 
 /* Get Started hub — topic cards */
-.gs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 1.5rem; padding: var(--section-pad); }
-.gs-grid-inner { max-width: var(--max-width); margin: 0 auto; }
+.gs-grid { padding: var(--section-pad); }
+.gs-grid-inner { max-width: var(--max-width); margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 1.5rem; }
 .gs-card { display: flex; flex-direction: column; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 2rem; text-decoration: none; color: inherit; transition: box-shadow 0.2s, transform 0.15s, border-color 0.15s; box-shadow: var(--shadow); }
 .gs-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); border-color: var(--accent); color: inherit; }
 .gs-card--coming { opacity: 0.55; cursor: default; }
@@ -261,6 +261,19 @@ a:hover { color:var(--accent-hover); }
 .breadcrumb-link:hover { text-decoration: underline; }
 .breadcrumb-sep { color: var(--text-muted, #888); }
 .breadcrumb-current { color: var(--text-muted, #888); }
+
+/* ── News ticker (coding-with-ai page) ──────────────────────────────────── */
+.news-warning { background: #FEF3CD; border: 1px solid #F0C040; border-radius: var(--radius); padding: 0.85rem 1.1rem; margin-bottom: 1rem; font-size: 0.875rem; color: #7A5800; }
+.news-warning strong { font-weight: 700; }
+.ticker-outer { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-alt); padding: 0.6rem 0; }
+.ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker-scroll 40s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item { display: inline-flex; align-items: baseline; gap: 0.4rem; font-size: 0.8rem; color: var(--text-secondary); text-decoration: none; flex-shrink: 0; padding: 0 0.5rem; }
+.ticker-item:hover { color: var(--accent); }
+.ticker-date { font-weight: 700; color: var(--text-muted); font-size: 0.75rem; }
+.ticker-title { color: var(--text); }
+.ticker-source { color: var(--text-muted); font-size: 0.75rem; }
+@keyframes ticker-scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ── Mobile dropdown override ────────────────────────────────────────────── */
 @media (max-width: 768px) {

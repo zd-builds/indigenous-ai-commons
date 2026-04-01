@@ -18,56 +18,15 @@
   </nav>
   <main id="main-content" aria-label="Safer AI Practices resources"></main>
 
-  <!-- Hierarchy of Data Risk visual explainer -->
   <section class="risk-explainer" aria-labelledby="risk-heading">
     <div class="risk-explainer-inner">
       <h2 class="risk-heading" id="risk-heading">Hierarchy of data risk</h2>
       <p class="risk-intro">
-        Not all AI tools carry the same risk to your data. This framework is specific to the threat model facing tribal nations: federal government access to community data. Where your query goes, and who can legally compel access to it, determines the risk tier. This is a sovereignty argument, not a capability argument.
+        Not all AI tools carry the same risk to your data. The hierarchy of data risk framework -- specific to the threat model facing tribal nations -- breaks down six tiers from US-based free models to local air-gapped machines, explains what legal compellability means at each tier, and includes five questions for evaluating any tool. This framework has its own dedicated page.
       </p>
-      <div class="risk-diagram" role="img" aria-label="Hierarchy of data risk from highest to lowest: US free models, US paid models, guardrailed managed AI, self-hosted tribal infrastructure, local networked AI, local air-gapped AI">
-        <svg width="100%" viewBox="0 0 640 300">
-          <text x="20" y="14" font-size="11" fill="currentColor" opacity="0.55">Higher data risk</text>
-          <g>
-            <rect x="20" y="22" width="600" height="36" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
-            <text x="38" y="40" font-size="13" font-weight="500" fill="#A32D2D" dominant-baseline="central">1</text>
-            <text x="62" y="40" font-size="13" fill="#A32D2D" dominant-baseline="central">US-based free AI models</text>
-          </g>
-          <g>
-            <rect x="20" y="64" width="600" height="36" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
-            <text x="38" y="82" font-size="13" font-weight="500" fill="#A32D2D" dominant-baseline="central">2</text>
-            <text x="62" y="82" font-size="13" fill="#A32D2D" dominant-baseline="central">US-based paid AI models</text>
-          </g>
-          <g>
-            <rect x="20" y="106" width="600" height="36" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
-            <text x="38" y="124" font-size="13" font-weight="500" fill="#444441" dominant-baseline="central">3</text>
-            <text x="62" y="124" font-size="13" fill="#444441" dominant-baseline="central">Guardrailed / managed AI (e.g. Copilot Enterprise)</text>
-          </g>
-          <g>
-            <rect x="20" y="148" width="600" height="36" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
-            <text x="38" y="166" font-size="13" font-weight="500" fill="#444441" dominant-baseline="central">4</text>
-            <text x="62" y="166" font-size="13" fill="#444441" dominant-baseline="central">Self-hosted on tribal infrastructure</text>
-          </g>
-          <g>
-            <rect x="20" y="190" width="600" height="36" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
-            <text x="38" y="208" font-size="13" font-weight="500" fill="#085041" dominant-baseline="central">5</text>
-            <text x="62" y="208" font-size="13" fill="#085041" dominant-baseline="central">Local AI — networked machine</text>
-          </g>
-          <g>
-            <rect x="20" y="232" width="600" height="36" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
-            <text x="38" y="250" font-size="13" font-weight="500" fill="#085041" dominant-baseline="central">6</text>
-            <text x="62" y="250" font-size="13" fill="#085041" dominant-baseline="central">Local AI — air-gapped machine</text>
-          </g>
-          <text x="20" y="286" font-size="11" fill="currentColor" opacity="0.55">Lower data risk</text>
-        </svg>
-      </div>
-      <div class="risk-notes">
-        <p><strong>Tiers 1 and 2:</strong> Both are subject to US surveillance law including FISA, which means the federal government can compel access without your knowledge. Free models typically also use inputs for training. The distinction between free and paid matters for privacy policy, but not for legal compellability.</p>
-        <p><strong>Tier 3:</strong> Guardrailed tools like Copilot Enterprise may not train on your data, and enterprise contracts can include data residency terms. The protection is contractual, not technical — it depends entirely on what your agreement says and whether it is enforced.</p>
-        <p><strong>Tier 4:</strong> Running AI on tribally-owned and tribally-controlled server infrastructure removes the commercial vendor from the chain. Still requires network security discipline and the technical capacity to manage it.</p>
-        <p><strong>Tiers 5 and 6:</strong> Local models running on hardware you own are the clearest sovereignty boundary. Queries never leave your machine. Tier 6 (air-gapped) eliminates even OS-level outbound traffic. The tradeoff is operational friction and the absence of cloud-scale capability — which is often not the capability your teams actually need.</p>
-        <p><strong>A note on non-US models:</strong> Models hosted outside US jurisdiction (EU, Canada, etc.) avoid US surveillance law but introduce different threat models. That tradeoff is worth understanding, but it is a separate analysis from this framework.</p>
-      </div>
+      <p class="risk-intro">
+        <a href="gs-hierarchy-of-risk.html">Read: Hierarchy of Data Risk &rarr;</a>
+      </p>
     </div>
   </section>
 

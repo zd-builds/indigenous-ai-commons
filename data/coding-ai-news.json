@@ -1,0 +1,27 @@
+{
+  "updated": "2026-03-31",
+  "note": "Community-curated. Unverified. Verify independently before acting on any item.",
+  "items": [
+    {
+      "date": "2026-02-26",
+      "title": "CVE-2025-59536 and CVE-2026-21852 patched in Claude Code",
+      "summary": "Two vulnerabilities allowing remote code execution and API key theft via malicious repository config files were patched in October 2025 and January 2026 respectively.",
+      "source": "The Hacker News",
+      "url": "https://thehackernews.com/2026/02/claude-code-flaws-allow-remote-code.html"
+    },
+    {
+      "date": "2026-03-31",
+      "title": "Anthropic source code leak exposes Claude Code internals",
+      "summary": "Approximately 500,000 lines of Claude Code source code across 1,900 files were accidentally included in a release package. No customer data was involved.",
+      "source": "Fortune",
+      "url": "https://fortune.com/2026/03/31/anthropic-source-code-claude-code-data-leak-second-security-lapse-days-after-accidentally-revealing-mythos/"
+    },
+    {
+      "date": "2025-09-01",
+      "title": "First documented AI-autonomous cyberattack at scale",
+      "summary": "Anthropic documented a campaign (GTG-1002) in which an AI agent conducted reconnaissance, exploitation, and data exfiltration with minimal human direction.",
+      "source": "Anthropic / Cybersecurity for Me",
+      "url": "https://cybersecurityforme.com/the-claude-ai-data-breaches-timeline/"
+    }
+  ]
+}
