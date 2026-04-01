@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Building with AI: Risk and Control for Developers — Indigenous AI Commons</title>
-  <meta name="description" content="What AI coding tools transmit, a hierarchy of risk for coding contexts, and a community-curated security news ticker." />
+  <meta name="description" content="What AI coding tools transmit, a risk hierarchy for coding contexts, and a community-curated security news feed." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-page="gs-coding-with-ai">
@@ -22,7 +22,7 @@
       <a href="get-started.html" class="back-link">&larr; Go Deeper</a>
       <h1 class="page-title">Building with AI: Risk and Control for Developers</h1>
       <p class="page-description">
-        Using AI to write code introduces different risks than using AI to answer questions. The data sovereignty questions shift when tools interact with your filesystem and credentials.
+        What agentic coding tools transmit beyond your code, how to evaluate them against a risk hierarchy, and a community-curated feed of recent security developments.
       </p>
     </div>
   </div>
@@ -37,44 +37,73 @@
 
         <h2>What coding AI tools may transmit</h2>
 
-        <p>
-          When you use a cloud-based coding assistant, the following may leave your machine as context passed to the model:
-        </p>
-
-        <ul>
-          <li>The code you are writing or editing</li>
-          <li>File contents from your project directory</li>
-          <li>Error messages and stack traces (which often contain paths, usernames, and configuration details)</li>
-          <li>Git history snippets</li>
-          <li>In agentic configurations: environment variables, credential files, and shell output</li>
-        </ul>
+        <div class="transmit-box">
+          <p>When you use a cloud-based coding assistant, the following may leave your machine as context passed to the model:</p>
+          <ul>
+            <li>The code you are writing or editing</li>
+            <li>File contents from your project directory</li>
+            <li>Error messages and stack traces (which often contain paths, usernames, and configuration details)</li>
+            <li>Git history snippets</li>
+            <li>In agentic configurations: environment variables, credential files, and shell output</li>
+          </ul>
+        </div>
 
         <h2>Hierarchy of risk for coding contexts</h2>
 
-        <p>
-          <strong>Highest risk: Agentic cloud tools with filesystem access.</strong> These tools read your files, suggest edits, and can execute commands, all while sending context to a remote server. Security researchers documented cases in late 2025 where malicious repository configuration files triggered arbitrary command execution and API key theft before any user prompt appeared. Both vulnerabilities were patched, but the pattern illustrates the structural risk of tools with broad local access and remote processing.
-        </p>
+        <div class="risk-tiers">
+          <div class="risk-tier risk-tier--high">
+            <div class="risk-tier-label">Highest risk</div>
+            <p><strong>Agentic cloud tools with filesystem access.</strong> These tools read your files, suggest edits, and can execute commands, all while sending context to a remote server. Security researchers documented cases in late 2025 where malicious repository configuration files triggered arbitrary command execution and API key theft before any user prompt appeared. Both vulnerabilities were patched, but the pattern illustrates the structural risk of tools with broad local access and remote processing.</p>
+          </div>
+          <div class="risk-tier risk-tier--moderate">
+            <div class="risk-tier-label">Moderate risk</div>
+            <p><strong>Cloud coding assistants without agentic capabilities.</strong> Tools that receive only what you paste, suggest completions, and return text. The data transfer is real but bounded. Appropriate for code that contains no secrets and no sensitive community or user data.</p>
+          </div>
+          <div class="risk-tier risk-tier--lower">
+            <div class="risk-tier-label">Lower risk</div>
+            <p><strong>Local coding models via Ollama.</strong> Models like qwen3:14b can assist with code generation, debugging, and documentation entirely on your hardware. Performance is slower than cloud tools for complex tasks, but the data never leaves your machine.</p>
+          </div>
+          <div class="risk-tier risk-tier--none">
+            <div class="risk-tier-label">No coding AI</div>
+            <p>For projects handling restricted or sensitive data that has not gone through a data governance review, no AI assistance is the appropriate baseline.</p>
+          </div>
+        </div>
 
-        <p>
-          <strong>Moderate risk: Cloud coding assistants without agentic capabilities.</strong> Tools that receive only what you paste, suggest completions, and return text. The data transfer is real but bounded. Appropriate for code that contains no secrets and no sensitive community or user data.
-        </p>
-
-        <p>
-          <strong>Lower risk: Local coding models via Ollama.</strong> Models like qwen3:14b can assist with code generation, debugging, and documentation entirely on your hardware. Performance is slower than cloud tools for complex tasks, but the data never leaves your machine.
-        </p>
-
-        <p>
-          <strong>No coding AI:</strong> For projects handling restricted or sensitive data that has not gone through a data governance review, no AI assistance is the appropriate baseline.
-        </p>
+        <div class="prose-callout">
+          <p><strong>Note:</strong> The tier framework above addresses vendor jurisdiction. Agentic tools require a second consideration -- the scope of local access. A tool can be Tier 2 on the vendor axis while having broader local data access than a typical Tier 2 tool implies. Evaluate both dimensions separately.</p>
+        </div>
 
         <h2>The five questions for evaluating any AI tool</h2>
 
-        <ol style="padding-left: 1.4rem; margin-bottom: 1.25rem;">
-          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Where does the data go?</strong> Is it processed locally or sent to a remote server?</li>
-          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>What does this tool have access to?</strong> Files, credentials, environment variables, network?</li>
-          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Who controls the output and the logs?</strong> What does the terms of service say about retention and training?</li>
-          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>What is the worst case if this tool is breached, acquired, or changes its terms?</strong></li>
-          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Can you explain and defend every decision this tool influenced?</strong></li>
+        <ol class="five-questions">
+          <li>
+            <div>
+              <strong>Where does the data go?</strong>
+              Is it processed locally or sent to a remote server?
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>What does this tool have access to?</strong>
+              Files, credentials, environment variables, network?
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Who controls the output and the logs?</strong>
+              What does the terms of service say about retention and training?
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>What is the worst case if this tool is breached, acquired, or changes its terms?</strong>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Can you explain and defend every decision this tool influenced?</strong>
+            </div>
+          </li>
         </ol>
 
         <h2>Staying current</h2>
@@ -83,8 +112,9 @@
           Security issues in AI tools move fast. The section below collects recent developments. Items are community-flagged and unverified -- treat them as starting points for your own research, not authoritative sources.
         </p>
 
-        <div class="news-warning">
-          <strong>Unverified.</strong> These items are community-curated. Verify independently before acting on any item.
+        <div class="news-warning" role="alert">
+          <span class="news-warning-icon">&#9888;</span>
+          <span><strong>Unverified -- community-curated.</strong> These items have not been independently confirmed. Verify before acting on any item.</span>
         </div>
 
         <div class="ticker-outer" aria-label="Recent AI security news">
@@ -138,7 +168,6 @@
         .then(function (data) {
           var track = document.getElementById('ticker-track');
           var items = data.items;
-          // Duplicate items so the loop is seamless
           var all = items.concat(items);
           track.innerHTML = all.map(function (item) {
             return '<a href="' + item.url + '" target="_blank" rel="noopener noreferrer" class="ticker-item">'
