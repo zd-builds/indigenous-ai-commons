@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local AI Infrastructure for Tribal Orgs — Indigenous AI Commons</title>
+  <meta name="description" content="How to run a local AI stack using Ollama and Open WebUI, hardware guidance, and what local infrastructure can and cannot solve for tribal organizations." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin: 2rem 0; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: var(--radius); }
+  </style>
+</head>
+<body data-page="gs-local-infrastructure">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Indigenous AI Commons</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">&#9776;</button>
+      <div id="nav-links" role="list"></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <a href="get-started.html" class="back-link">&larr; Go Deeper</a>
+      <h1 class="page-title">Local AI Infrastructure for Tribal Orgs</h1>
+      <p class="page-description">
+        How to stand up a local AI stack using Ollama and Open WebUI, what hardware you need, and an honest account of what local infrastructure solves and what it does not.
+      </p>
+    </div>
+  </div>
+
+  <main id="main-content" aria-label="Local AI Infrastructure for Tribal Organizations">
+    <div class="prose-page">
+      <div class="prose-inner">
+
+        <p>
+          Running AI locally means queries never leave your hardware. No cloud vendor. No terms of service that change next quarter. No federal subpoena to a third party that holds your community's data. That is the sovereignty case for local AI. The practical case is that the tools to do this are now accessible enough that a single person with moderate technical experience can set one up in an afternoon.
+        </p>
+
+        <h2>The core stack</h2>
+
+        <p>
+          Three tools do most of the work:
+        </p>
+
+        <ul>
+          <li>
+            <strong><a href="https://ollama.com" target="_blank" rel="noopener noreferrer">Ollama</a></strong> handles downloading and running open-source models on your hardware. It runs on Mac, Windows, and Linux. One command installs a model. It can also serve a local network so multiple users share one machine.
+          </li>
+          <li>
+            <strong><a href="https://openwebui.com" target="_blank" rel="noopener noreferrer">Open WebUI</a></strong> gives non-technical staff a familiar chat interface -- similar to ChatGPT -- that connects to Ollama running on the same machine or on a local server. No command line required for end users.
+          </li>
+          <li>
+            <strong>qwen3:14b</strong> is a strong general-purpose model at the 14-billion-parameter tier. It runs well on a standard laptop with 16GB of RAM, handles multilingual content including some Indigenous languages, and performs reliably on document analysis, drafting, and summarization tasks.
+          </li>
+        </ul>
+
+        <h2>Hardware guidance</h2>
+
+        <ul>
+          <li>
+            <strong>Entry level (single user, 14B models):</strong> Any laptop or mini PC with 16GB of RAM. A Mac Mini M2 or M4 base model works well. Expected cost: $600 to $800 used or $800 to $1,000 new.
+          </li>
+          <li>
+            <strong>Shared departmental use (multiple users, 14B to 32B models):</strong> A Mac Mini M4 Pro with 24GB unified memory or a Windows workstation with 32GB RAM and a mid-range GPU. Expected cost: $1,200 to $2,000.
+          </li>
+          <li>
+            <strong>Org-wide server (70B models, RAG pipeline):</strong> A Mac Mini M4 Pro with 48GB unified memory is the most accessible entry point at this tier -- roughly $2,000. A workstation with an Nvidia GPU and 48GB or more VRAM works as well but requires more configuration.
+          </li>
+          <li>
+            <strong>Models are free.</strong> The only ongoing costs are hardware and electricity.
+          </li>
+        </ul>
+
+        <h2>Video: setting up a local AI stack</h2>
+
+        <p>
+          This walkthrough covers installing Ollama, pulling a model, and connecting Open WebUI for a shared local interface.
+        </p>
+
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/kt3RKCPnrgw?si=9ahTwNbaZD9K06J4"
+            title="Setting up a local AI stack with Ollama and Open WebUI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <h2>What local infrastructure enables</h2>
+
+        <ul>
+          <li>Queries processed on hardware you own -- no data leaves your network.</li>
+          <li>Staff can use AI tools for drafting, summarizing, and analyzing documents without submitting community data to cloud vendors.</li>
+          <li>A single machine can serve an entire office over a local network.</li>
+          <li>No ongoing subscription cost once hardware is purchased.</li>
+          <li>The setup works offline -- useful in areas with unreliable connectivity.</li>
+        </ul>
+
+        <h2>What local infrastructure does not solve</h2>
+
+        <ul>
+          <li>
+            <strong>Physical security.</strong> If the machine is physically accessible to unauthorized parties, the data sovereignty benefit is partially undermined. Standard endpoint security applies.
+          </li>
+          <li>
+            <strong>Network security.</strong> If Open WebUI is accessible on a network with poor access controls, queries from any connected device can reach the model. Limit access to trusted devices on the local network.
+          </li>
+          <li>
+            <strong>Data governance.</strong> A local AI tool does not automatically know which data is culturally restricted, legally sensitive, or subject to tribal data sovereignty policies. Staff still need guidance on what to input and what to keep out.
+          </li>
+          <li>
+            <strong>Model capability gaps.</strong> Local models at the 14B tier are capable but not equivalent to the largest cloud models for complex reasoning or specialized domains. For most drafting, summarization, and Q&amp;A tasks tribal staff perform, the gap is acceptable. For high-stakes legal, medical, or regulatory analysis, no AI -- local or cloud -- replaces expert review.
+          </li>
+          <li>
+            <strong>Updates and maintenance.</strong> Someone needs to keep the software updated and monitor for security advisories on Ollama and Open WebUI. This is light work but requires assigning responsibility.
+          </li>
+        </ul>
+
+        <div class="prose-callout">
+          <p>
+            <strong>Local AI is a floor, not a ceiling.</strong> It gives your team a safe baseline for AI use -- a tool that works, does not transmit data externally, and does not require cloud accounts or subscriptions. From that baseline, you can expand capability as your data governance policy matures.
+          </p>
+        </div>
+
+        <nav class="prose-nav" aria-label="Topic navigation">
+          <a href="gs-local-models.html">&larr; Previous: Local Models: Capability and Tradeoffs</a>
+          <a href="gs-hierarchy-of-risk.html" class="prose-nav-next">Next: Hierarchy of Data Risk &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Indigenous AI Commons</div>
+        <p class="footer-tagline">A living index of resources on AI, data sovereignty, and community-led technology. Built for Indigenous communities. Useful to anyone who approaches this work with respect.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="indigenous-built-ai.html" class="footer-link">Indigenous-Built AI</a>
+        <a href="community-solutions.html" class="footer-link">Community Solutions</a>
+        <a href="data-as-culture.html" class="footer-link">Data as Culture</a>
+        <a href="academic-research.html" class="footer-link">Academic Research</a>
+        <a href="global-resources.html" class="footer-link">Global Resources</a>
+        <a href="safer-ai-practices.html" class="footer-link">Safer AI Practices</a>
+        <a href="get-started.html" class="footer-link">Go Deeper</a>
+        <a href="about.html" class="footer-link">About</a>
+      </nav>
+      <div class="footer-submit">
+        <p>Know of a resource that belongs here?</p>
+        <p><a href="mailto:zam.deshields@gmail.com?subject=Indigenous%20AI%20Commons%20Submission">Submit a resource &rarr;</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Indigenous AI Commons &mdash; built by <a href="https://www.linkedin.com/in/zam-deshields" class="footer-byline-link" target="_blank" rel="noopener noreferrer">Zam DeShields</a> &middot; <a href="about.html" class="footer-byline-link">About</a></span>
+      <span>Resources belong to their authors. This index belongs to the commons.</span>
+    </div>
+  </footer>
+
+  <script src="resources.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

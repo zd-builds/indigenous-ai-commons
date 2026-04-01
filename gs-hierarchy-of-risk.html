@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hierarchy of Data Risk — Indigenous AI Commons</title>
+  <meta name="description" content="A framework for understanding AI data risk specific to tribal nations, from US-based cloud tools to local air-gapped models." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="gs-hierarchy-of-risk">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="site-nav" aria-label="Site navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Indigenous AI Commons</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">&#9776;</button>
+      <div id="nav-links" role="list"></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-header-inner">
+      <a href="get-started.html" class="back-link">&larr; Go Deeper</a>
+      <h1 class="page-title">Hierarchy of Data Risk</h1>
+      <p class="page-description">
+        Not all AI tools carry the same risk to your data. Where your query goes, and who can legally compel access to it, determines the risk tier.
+      </p>
+    </div>
+  </div>
+
+  <main id="main-content" aria-label="Hierarchy of Data Risk">
+    <div class="prose-page">
+      <div class="prose-inner">
+
+        <p>
+          Not all AI tools carry the same risk to your data. This framework is specific to the threat model facing tribal nations: federal government access to community data. Where your query goes, and who can legally compel access to it, determines the risk tier. This is a sovereignty argument, not a capability argument.
+        </p>
+
+        <h2>The tiers -- highest to lowest data risk</h2>
+
+        <div class="risk-diagram" role="img" aria-label="Hierarchy of data risk from highest to lowest: US free models, US paid models, guardrailed managed AI, self-hosted tribal infrastructure, local networked AI, local air-gapped AI" style="margin: 1.5rem 0 2rem;">
+          <svg width="100%" viewBox="0 0 640 300">
+            <text x="20" y="14" font-size="11" fill="currentColor" opacity="0.55">Higher data risk</text>
+            <g>
+              <rect x="20" y="22" width="600" height="36" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
+              <text x="38" y="40" font-size="13" font-weight="500" fill="#A32D2D" dominant-baseline="central">1</text>
+              <text x="62" y="40" font-size="13" fill="#A32D2D" dominant-baseline="central">US-based free AI models</text>
+            </g>
+            <g>
+              <rect x="20" y="64" width="600" height="36" rx="4" fill="#FCEBEB" stroke="#F09595" stroke-width="0.5"/>
+              <text x="38" y="82" font-size="13" font-weight="500" fill="#A32D2D" dominant-baseline="central">2</text>
+              <text x="62" y="82" font-size="13" fill="#A32D2D" dominant-baseline="central">US-based paid AI models</text>
+            </g>
+            <g>
+              <rect x="20" y="106" width="600" height="36" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+              <text x="38" y="124" font-size="13" font-weight="500" fill="#444441" dominant-baseline="central">3</text>
+              <text x="62" y="124" font-size="13" fill="#444441" dominant-baseline="central">Guardrailed / managed AI (e.g. Copilot Enterprise)</text>
+            </g>
+            <g>
+              <rect x="20" y="148" width="600" height="36" rx="4" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+              <text x="38" y="166" font-size="13" font-weight="500" fill="#444441" dominant-baseline="central">4</text>
+              <text x="62" y="166" font-size="13" fill="#444441" dominant-baseline="central">Self-hosted on tribal infrastructure</text>
+            </g>
+            <g>
+              <rect x="20" y="190" width="600" height="36" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
+              <text x="38" y="208" font-size="13" font-weight="500" fill="#085041" dominant-baseline="central">5</text>
+              <text x="62" y="208" font-size="13" fill="#085041" dominant-baseline="central">Local AI -- networked machine</text>
+            </g>
+            <g>
+              <rect x="20" y="232" width="600" height="36" rx="4" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
+              <text x="38" y="250" font-size="13" font-weight="500" fill="#085041" dominant-baseline="central">6</text>
+              <text x="62" y="250" font-size="13" fill="#085041" dominant-baseline="central">Local AI -- air-gapped machine</text>
+            </g>
+            <text x="20" y="286" font-size="11" fill="currentColor" opacity="0.55">Lower data risk</text>
+          </svg>
+        </div>
+
+        <h2>What each tier means</h2>
+
+        <p>
+          <strong>Tiers 1 and 2:</strong> Both are subject to US surveillance law including FISA, which means the federal government can compel access without your knowledge. Free models typically also use inputs for training. The distinction between free and paid matters for privacy policy, but not for legal compellability.
+        </p>
+
+        <p>
+          <strong>Tier 3:</strong> Guardrailed tools like Copilot Enterprise may not train on your data, and enterprise contracts can include data residency terms. The protection is contractual, not technical -- it depends entirely on what your agreement says and whether it is enforced.
+        </p>
+
+        <p>
+          <strong>Tier 4:</strong> Running AI on tribally-owned and tribally-controlled server infrastructure removes the commercial vendor from the chain. Still requires network security discipline and the technical capacity to manage it.
+        </p>
+
+        <p>
+          <strong>Tiers 5 and 6:</strong> Local models running on hardware you own are the clearest sovereignty boundary. Queries never leave your machine. Tier 6 (air-gapped) eliminates even OS-level outbound traffic. The tradeoff is operational friction and the absence of cloud-scale capability -- which is often not the capability your teams actually need.
+        </p>
+
+        <p>
+          <strong>A note on non-US models:</strong> Models hosted outside US jurisdiction (EU, Canada, etc.) avoid US surveillance law but introduce different threat models. That tradeoff is worth understanding, but it is a separate analysis from this framework.
+        </p>
+
+        <h2>The five questions</h2>
+
+        <ol style="padding-left: 1.4rem; margin-bottom: 1.25rem;">
+          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Where is the query going?</strong> Local machine or a cloud server you do not control?</li>
+          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Who owns the output?</strong> Check terms of service -- most cloud AI providers claim training rights on inputs.</li>
+          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>What data am I including?</strong> Consider sensitivity: personal information, location, legally significant details, culturally restricted material.</li>
+          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Is AI the right tool?</strong> It should not replace expert review for regulatory, legal, or high-stakes decisions.</li>
+          <li style="font-size: 1rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 0.6rem;"><strong>Can you explain what it did?</strong> You are responsible for the output. "The AI told me" is not a defensible answer.</li>
+        </ol>
+
+        <div class="prose-callout">
+          <p>
+            This framework is a starting point for evaluating tools, not a compliance checklist. The right tier for a given task depends on the sensitivity of the data, the nature of the decision, and the governance capacity your organization has in place.
+          </p>
+        </div>
+
+        <nav class="prose-nav" aria-label="Topic navigation">
+          <a href="gs-local-infrastructure.html">&larr; Previous: Local AI Infrastructure</a>
+          <a href="gs-coding-with-ai.html" class="prose-nav-next">Next: Building with AI &rarr;</a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Indigenous AI Commons</div>
+        <p class="footer-tagline">A living index of resources on AI, data sovereignty, and community-led technology. Built for Indigenous communities. Useful to anyone who approaches this work with respect.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="indigenous-built-ai.html" class="footer-link">Indigenous-Built AI</a>
+        <a href="community-solutions.html" class="footer-link">Community Solutions</a>
+        <a href="data-as-culture.html" class="footer-link">Data as Culture</a>
+        <a href="academic-research.html" class="footer-link">Academic Research</a>
+        <a href="global-resources.html" class="footer-link">Global Resources</a>
+        <a href="safer-ai-practices.html" class="footer-link">Safer AI Practices</a>
+        <a href="get-started.html" class="footer-link">Go Deeper</a>
+        <a href="about.html" class="footer-link">About</a>
+      </nav>
+      <div class="footer-submit">
+        <p>Know of a resource that belongs here?</p>
+        <p><a href="mailto:zam.deshields@gmail.com?subject=Indigenous%20AI%20Commons%20Submission">Submit a resource &rarr;</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Indigenous AI Commons &mdash; built by <a href="https://www.linkedin.com/in/zam-deshields" class="footer-byline-link" target="_blank" rel="noopener noreferrer">Zam DeShields</a> &middot; <a href="about.html" class="footer-byline-link">About</a></span>
+      <span>Resources belong to their authors. This index belongs to the commons.</span>
+    </div>
+  </footer>
+
+  <script src="resources.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
