@@ -81,18 +81,37 @@
           <div class="risk-tier risk-tier--high">
             <div class="risk-tier-label">Highest risk</div>
             <p><strong>Agentic cloud tools with filesystem access.</strong> These tools read your files, suggest edits, and can execute commands, all while sending context to a remote server. Security researchers documented cases in late 2025 where malicious repository configuration files triggered arbitrary command execution and API key theft before any user prompt appeared. Both vulnerabilities were patched, but the pattern illustrates the structural risk of tools with broad local access and remote processing.</p>
+            <div class="tier-tools" aria-label="Example tools in this category">
+              <a href="https://claude.ai/download" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Claude Code</a>
+              <a href="https://cursor.com" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Cursor</a>
+              <a href="https://windsurf.com" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Windsurf</a>
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="tier-tool-link">GitHub Copilot (agent mode)</a>
+            </div>
           </div>
           <div class="risk-tier risk-tier--moderate">
             <div class="risk-tier-label">Moderate risk</div>
             <p><strong>Cloud coding assistants without agentic capabilities.</strong> Tools that receive only what you paste, suggest completions, and return text. The data transfer is real but bounded. Appropriate for code that contains no secrets and no sensitive community or user data.</p>
+            <div class="tier-tools" aria-label="Example tools in this category">
+              <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" class="tier-tool-link">GitHub Copilot (basic)</a>
+              <a href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" class="tier-tool-link">ChatGPT</a>
+              <a href="https://aws.amazon.com/q/developer/" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Amazon Q Developer</a>
+              <a href="https://replit.com" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Replit AI</a>
+            </div>
           </div>
           <div class="risk-tier risk-tier--lower">
             <div class="risk-tier-label">Lower risk</div>
             <p><strong>Local coding models via Ollama.</strong> Models like qwen3:14b can assist with code generation, debugging, and documentation entirely on your hardware. Performance is slower than cloud tools for complex tasks, but the data never leaves your machine.</p>
+            <div class="tier-tools" aria-label="Example tools in this category">
+              <a href="https://ollama.com" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Ollama</a>
+              <a href="https://lmstudio.ai" target="_blank" rel="noopener noreferrer" class="tier-tool-link">LM Studio</a>
+              <a href="https://jan.ai" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Jan</a>
+              <a href="https://continue.dev" target="_blank" rel="noopener noreferrer" class="tier-tool-link">Continue.dev</a>
+            </div>
           </div>
           <div class="risk-tier risk-tier--none">
             <div class="risk-tier-label">No coding AI</div>
             <p>For projects handling restricted or sensitive data that has not gone through a data governance review, no AI assistance is the appropriate baseline.</p>
+            <p class="tier-tools-note">None of the tools above are appropriate without a completed governance review. Use your standard development environment.</p>
           </div>
         </div>
 
