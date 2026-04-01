@@ -282,6 +282,13 @@ a:hover { color:var(--accent-hover); }
 .risk-tier--none .risk-tier-label    { color: var(--text-muted); }
 .risk-tier p { font-size: 0.95rem; line-height: 1.75; color: var(--text-secondary); margin: 0; }
 .risk-tier strong { color: var(--text); }
+.tier-tools { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+.tier-tool-link { font-size: 0.78rem; padding: 0.2rem 0.6rem; border-radius: 3px; border: 1px solid; text-decoration: none; transition: opacity 0.15s; white-space: nowrap; }
+.tier-tool-link:hover { opacity: 0.75; text-decoration: underline; }
+.risk-tier--high .tier-tool-link     { color: #A32D2D; border-color: #F09595; background: #FEE2E2; }
+.risk-tier--moderate .tier-tool-link { color: #7A4200; border-color: #E8AA6A; background: #FFF3E0; }
+.risk-tier--lower .tier-tool-link    { color: #085041; border-color: #5DCAA5; background: #E1F5EE; }
+.tier-tools-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem; font-style: italic; }
 
 /* ── Five questions list ─────────────────────────────────────────────────── */
 .five-questions { list-style: none; padding: 0; margin: 1rem 0 1.5rem; counter-reset: q-counter; }
