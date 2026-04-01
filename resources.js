@@ -79,6 +79,16 @@ const RESOURCES = [
     published: true
   },
   {
+    id: "fntc-pathways-to-ai",
+    title: "First Nations Technology Council — Pathways to AI",
+    url: "https://www.technologycouncil.ca/pathways-to-ai/",
+    type: "guide",
+    category: "community-solutions",
+    description: "Free, self-paced 1.5-hour course designed specifically for Indigenous people and Indigenous-serving organizations. Covers how AI works, practical use of tools like ChatGPT and Copilot, and critical concerns including bias, data misuse, and protection of sacred knowledge — framed through relationality, OCAP®, and data sovereignty. No prerequisites, certificate on completion.",
+    region: "Canada",
+    published: true
+  },
+  {
     id: "cherokee-nation-ai",
     title: "Cherokee Nation AI Task Force",
     url: "https://www.cherokee.org/all-services/tribal-technology/",
