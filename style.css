@@ -262,9 +262,39 @@ a:hover { color:var(--accent-hover); }
 .breadcrumb-sep { color: var(--text-muted, #888); }
 .breadcrumb-current { color: var(--text-muted, #888); }
 
+/* ── Coding with AI page -- transmit box ────────────────────────────────── */
+.transmit-box { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 0.25rem 0 2rem; }
+.transmit-box > p { margin-bottom: 0.6rem; font-size: 0.95rem; color: var(--text-secondary); }
+.transmit-box ul { margin-bottom: 0; padding-left: 1.2rem; }
+.transmit-box li { font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 0.3rem; }
+
+/* ── Risk tier blocks ────────────────────────────────────────────────────── */
+.risk-tiers { display: flex; flex-direction: column; gap: 0.75rem; margin: 1rem 0 2rem; }
+.risk-tier { border-left: 4px solid; border-radius: 0 var(--radius) var(--radius) 0; padding: 1rem 1.25rem; }
+.risk-tier--high    { background: #FEF2F2; border-color: #CC2200; }
+.risk-tier--moderate { background: #FFF7ED; border-color: #D4730A; }
+.risk-tier--lower   { background: #F0FDF9; border-color: #1A8C8A; }
+.risk-tier--none    { background: var(--bg-alt); border-color: var(--border); }
+.risk-tier-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.4rem; }
+.risk-tier--high .risk-tier-label    { color: #CC2200; }
+.risk-tier--moderate .risk-tier-label { color: #A85500; }
+.risk-tier--lower .risk-tier-label   { color: #136E6D; }
+.risk-tier--none .risk-tier-label    { color: var(--text-muted); }
+.risk-tier p { font-size: 0.95rem; line-height: 1.75; color: var(--text-secondary); margin: 0; }
+.risk-tier strong { color: var(--text); }
+
+/* ── Five questions list ─────────────────────────────────────────────────── */
+.five-questions { list-style: none; padding: 0; margin: 1rem 0 1.5rem; counter-reset: q-counter; }
+.five-questions li { counter-increment: q-counter; display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border-light); align-items: flex-start; }
+.five-questions li:last-child { border-bottom: none; padding-bottom: 0; }
+.five-questions li::before { content: counter(q-counter); font-size: 1.6rem; font-weight: 700; color: var(--accent); line-height: 1.1; flex-shrink: 0; min-width: 1.75rem; }
+.five-questions li div { font-size: 0.95rem; line-height: 1.75; color: var(--text-secondary); }
+.five-questions li strong { color: var(--text); display: block; margin-bottom: 0.15rem; }
+
 /* ── News ticker (coding-with-ai page) ──────────────────────────────────── */
-.news-warning { background: #FEF3CD; border: 1px solid #F0C040; border-radius: var(--radius); padding: 0.85rem 1.1rem; margin-bottom: 1rem; font-size: 0.875rem; color: #7A5800; }
-.news-warning strong { font-weight: 700; }
+.news-warning { background: #FEF08A; border: 2px solid #CA8A04; border-radius: var(--radius); padding: 1rem 1.25rem; margin-bottom: 1rem; font-size: 0.9rem; color: #713F12; display: flex; gap: 0.75rem; align-items: flex-start; }
+.news-warning-icon { font-size: 1.2rem; flex-shrink: 0; line-height: 1.4; }
+.news-warning strong { font-weight: 700; color: #5C3109; }
 .ticker-outer { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-alt); padding: 0.6rem 0; }
 .ticker-track { display: flex; gap: 3rem; white-space: nowrap; animation: ticker-scroll 40s linear infinite; }
 .ticker-track:hover { animation-play-state: paused; }
