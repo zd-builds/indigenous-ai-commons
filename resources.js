@@ -65,6 +65,16 @@ const RESOURCES = [
     region: "United States",
     published: true
   },
+  {
+    id: "flair-mila",
+    title: "FLAIR (First Languages AI Reality), Mila Quebec",
+    url: "https://mila.quebec/en/ai4humanity/applied-projects/first-languages-ai-reality",
+    type: "project",
+    category: "indigenous-built-ai",
+    description: "Indigenous-led voice AI for endangered language revitalization, built with data sovereignty and linguistic self-determination at its core. Open source. Led by Michael Running Wolf.",
+    region: "Canada",
+    published: true
+  },
 
   // COMMUNITY SOLUTIONS
 
@@ -157,6 +167,26 @@ const RESOURCES = [
     category: "community-solutions",
     description: "The policy document signed by Principal Chief Chuck Hoskin Jr. in August 2025 — one of the first comprehensive Indigenous AI governance frameworks. Covers approved uses, cultural protections (Cherokee language requires fluent speaker oversight), governance committee structure, and data protection requirements. A working model other nations can adapt.",
     region: "United States",
+    published: true
+  },
+  {
+    id: "indigenous-pathfinders-ai",
+    title: "Indigenous Pathfinders in AI, Mila + Indspire",
+    url: "https://mila.quebec/en/ai4humanity/ai-governance-policy-and-inclusion/indigenous-pathfinders-in-ai",
+    type: "community",
+    category: "community-solutions",
+    description: "Annual career-pathway program for First Nations, Inuit, and Métis post-secondary students. Cohorts produce community-driven AI projects including language revitalization tools, data sovereignty platforms, and Indigenous food systems work.",
+    region: "Canada",
+    published: true
+  },
+  {
+    id: "jeff-doctor-mydata-2021",
+    title: "Jeff Doctor: Are Individualistic Data Policies and Designs Fuelling Digital Colonialism?",
+    url: "https://vimeo.com/653038251",
+    type: "guide",
+    category: "community-solutions",
+    description: "Cayuga technologist Jeff Doctor (Animikii) on how individualistic data frameworks reproduce colonial logic, and what Indigenous data sovereignty demands instead. MyData Canada, 2021.",
+    region: "Canada",
     published: true
   },
 
@@ -366,6 +396,16 @@ const RESOURCES = [
     region: "Global",
     published: true
   },
+  {
+    id: "yanchapaxi-murphy-2025",
+    title: "Indigenous Environmental Data Justice: Confronting Colonial Data and Activating Indigenous Sovereignty",
+    url: "https://journals.sagepub.com/doi/10.1177/01622439251343837",
+    type: "paper",
+    category: "academic-research",
+    description: "Yanchapaxi and Murphy (2025) in Science, Technology, and Human Values. Frameworks Indigenous Environmental Data Justice as distinct from Environmental Data Justice, centering place-based, community-led data sovereignty practices. Treats data as relational rather than extractive.",
+    region: "Global",
+    published: true
+  },
 
   // GLOBAL RESOURCES
 
@@ -437,16 +477,6 @@ const RESOURCES = [
     category: "global-resources",
     description: "Curated collection of resources connecting AI discourse with Indigenous rights, sovereignty, and social justice frameworks from a critical perspective.",
     region: "Global",
-    published: true
-  },
-  {
-    id: "mila-quebec",
-    title: "Mila — Quebec AI Institute",
-    url: "https://mila.quebec/en",
-    type: "project",
-    category: "global-resources",
-    description: "Partner in the Abundant Intelligences research project, bringing Indigenous knowledge systems into engagement with AI research at one of the world's leading AI institutes.",
-    region: "Canada",
     published: true
   },
   {
