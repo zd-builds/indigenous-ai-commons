@@ -40,7 +40,7 @@ const RESOURCES = [
     url: "https://www.nativebio.org/",
     type: "project",
     category: "indigenous-built-ai",
-    description: "The first Indigenous-led genomic biorepository on sovereign Native American land (Cheyenne River Sioux Reservation), centering tribal sovereignty and Indigenous data governance in health and science research.",
+    description: "The first Indigenous-led genomic biorepository on sovereign Native American land (Cheyenne River Sioux Reservation), centering Indigenous sovereignty and Indigenous data governance in health and science research.",
     region: "United States",
     published: true
   },
@@ -61,7 +61,7 @@ const RESOURCES = [
     url: "https://www.steamconnection.org/skobots",
     type: "project",
     category: "indigenous-built-ai",
-    description: "Wearable, AI-powered robots designed to teach endangered Indigenous languages to youth. Built by Danielle Boyer (Ojibwe, Sault Ste Marie Tribe of Chippewa Indians), distributed free to tribal schools and Indigenous organizations. Uses internally-developed AI that functions without Wi-Fi, designed for communities with limited connectivity.",
+    description: "Wearable, AI-powered robots designed to teach endangered Indigenous languages to youth. Built by Danielle Boyer (Ojibwe, Sault Ste Marie Tribe of Chippewa Indians), distributed free to Indigenous schools and organizations. Uses internally-developed AI that functions without Wi-Fi, designed for communities with limited connectivity.",
     region: "United States",
     published: true
   },
@@ -104,7 +104,7 @@ const RESOURCES = [
     url: "https://law.asu.edu/newsroom/wiring-rez-tribal-nations-claim-their-digital-futures",
     type: "community",
     category: "community-solutions",
-    description: "Annual conference where tribal leaders, legal experts, and community members develop policy and practice on digital sovereignty. 2026 theme: infrastructure is sovereignty in action, including AI infrastructure.",
+    description: "Annual conference where Indigenous leaders, legal experts, and community members develop policy and practice on digital sovereignty. 2026 theme: infrastructure is sovereignty in action, including AI infrastructure.",
     region: "United States",
     published: true
   },
@@ -114,7 +114,7 @@ const RESOURCES = [
     url: "https://apps.law.asu.edu/FB/Tribal-Digital-Sovereignty-Guidebook-November-2025/",
     type: "guide",
     category: "community-solutions",
-    description: "Practical guide for tribal nations on broadband, spectrum sovereignty, data governance, and AI, framing digital infrastructure as an instrument of self-determination. From ASU's American Indian Policy Institute.",
+    description: "Practical guide for Indigenous nations on broadband, spectrum sovereignty, data governance, and AI, framing digital infrastructure as an instrument of self-determination. From ASU's American Indian Policy Institute.",
     region: "United States",
     published: true
   },
@@ -134,7 +134,7 @@ const RESOURCES = [
     url: "https://aipi.asu.edu/blog/2026/02/proactive-solutions-implementing-tribal-digital-sovereignty",
     type: "guide",
     category: "community-solutions",
-    description: "From Arizona State University's American Indian Policy Institute, a 2026 analysis of implementation strategies tribal nations are using to assert digital sovereignty, covering governance structures, data policies, and AI decision frameworks.",
+    description: "From Arizona State University's American Indian Policy Institute, a 2026 analysis of implementation strategies Indigenous nations are using to assert digital sovereignty, covering governance structures, data policies, and AI decision frameworks.",
     region: "United States",
     published: true
   },
@@ -155,7 +155,7 @@ const RESOURCES = [
     url: "https://www.cherokee.org/media/fo4pcqvz/cherokee-nation-information-technology-artificial-intelligence-ai-policy.pdf",
     type: "framework",
     category: "community-solutions",
-    description: "The policy document signed by Principal Chief Chuck Hoskin Jr. in August 2025 — one of the first comprehensive tribal AI governance frameworks. Covers approved uses, cultural protections (Cherokee language requires fluent speaker oversight), governance committee structure, and data protection requirements. A working model other nations can adapt.",
+    description: "The policy document signed by Principal Chief Chuck Hoskin Jr. in August 2025 — one of the first comprehensive Indigenous AI governance frameworks. Covers approved uses, cultural protections (Cherokee language requires fluent speaker oversight), governance committee structure, and data protection requirements. A working model other nations can adapt.",
     region: "United States",
     published: true
   },
@@ -331,7 +331,7 @@ const RESOURCES = [
     url: "https://www.ou.edu/nativenationscenter/research/sovereign-snapshot-ai-in-a-tribal-context",
     type: "paper",
     category: "academic-research",
-    description: "Peer-reviewed literature review from the University of Oklahoma Native Nations Center surveying how tribal nations are engaging AI for self-determination, with examples of community-controlled implementations.",
+    description: "Peer-reviewed literature review from the University of Oklahoma Native Nations Center surveying how Indigenous nations are engaging AI for self-determination, with examples of community-controlled implementations.",
     region: "United States",
     published: true
   },
@@ -415,7 +415,7 @@ const RESOURCES = [
     url: "https://www.brookings.edu/articles/avoiding-the-next-digital-divide-defining-digital-sovereignty-for-tribal-nations-in-the-ai-age/",
     type: "paper",
     category: "global-resources",
-    description: "Policy analysis of how AI infrastructure investment risks replicating past patterns of exclusion for tribal nations, and what equitable participation in the AI era actually requires.",
+    description: "Policy analysis of how AI infrastructure investment risks replicating past patterns of exclusion for Indigenous nations, and what equitable participation in the AI era actually requires.",
     region: "United States",
     published: true
   },
