@@ -25,8 +25,6 @@ function renderNav() {
   const current = getCurrentPage();
   const isCategory = CATEGORIES.some(c => c.id === current);
 
-  const homeLink = `<a href="index.html" class="nav-link ${current === "index" ? "active" : ""}">Home</a>`;
-
   const dropdownItems = CATEGORIES.map(cat =>
     `<a href="${cat.id}.html" class="nav-link nav-dropdown-item ${current === cat.id ? "active" : ""}" role="menuitem">${cat.title}</a>`
   ).join("");
@@ -40,9 +38,10 @@ function renderNav() {
     </div>`;
 
   const getStartedLink = `<a href="get-started.html" class="nav-link nav-link--highlight ${current === "get-started" || current.startsWith("gs-") ? "active" : ""}">Go Deeper</a>`;
+  const eventsLink = `<a href="events.html" class="nav-link ${current === "events" ? "active" : ""}">Events</a>`;
   const aboutLink = `<a href="about.html" class="nav-link ${current === "about" ? "active" : ""}">About</a>`;
 
-  document.getElementById("nav-links").innerHTML = homeLink + resourcesDropdown + getStartedLink + aboutLink;
+  document.getElementById("nav-links").innerHTML = resourcesDropdown + getStartedLink + eventsLink + aboutLink;
 }
 
 function renderBreadcrumb() {
@@ -135,14 +134,34 @@ function initMobileMenu() {
   });
 }
 
+function initDropdown() {
+  const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+  if (!dropdownToggle) return;
+  const dropdown = dropdownToggle.closest(".nav-dropdown");
+
+  dropdownToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle("open");
+    dropdownToggle.setAttribute("aria-expanded", isOpen);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".nav-dropdown")) {
+      dropdown.classList.remove("open");
+      dropdownToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const page = getCurrentPage();
   renderNav();
   renderBreadcrumb();
   if (page === "index") {
     renderHomePage();
-  } else if (page !== "get-started" && !page.startsWith("gs-") && page !== "about") {
+  } else if (page !== "get-started" && !page.startsWith("gs-") && page !== "about" && page !== "events") {
     renderCategoryPage(page);
   }
   initMobileMenu();
+  initDropdown();
 });
