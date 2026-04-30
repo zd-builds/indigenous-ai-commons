@@ -23,11 +23,13 @@ function getCurrentPage() {
 
 function renderNav() {
   const current = getCurrentPage();
-  const isCategory = CATEGORIES.some(c => c.id === current);
+  const isCategory = CATEGORIES.some(c => c.id === current) || current === "example-policies";
 
   const dropdownItems = CATEGORIES.map(cat =>
     `<a href="${cat.id}.html" class="nav-link nav-dropdown-item ${current === cat.id ? "active" : ""}" role="menuitem">${cat.title}</a>`
-  ).join("");
+  ).join("") +
+  `<hr role="presentation" style="border:none;border-top:1px solid var(--border-light);margin:0.25rem 0.5rem;" />` +
+  `<a href="resources/example-policies.html" class="nav-link nav-dropdown-item ${current === "example-policies" ? "active" : ""}" role="menuitem">Example Policies</a>`;
 
   const resourcesDropdown = `
     <div class="nav-dropdown${isCategory ? " active" : ""}">
