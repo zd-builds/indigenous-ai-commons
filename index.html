@@ -20,14 +20,8 @@
 </head>
 <body data-page="index">
 
-  <!-- Navigation -->
-  <nav class="site-nav" aria-label="Site navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand">Indigenous AI Commons</a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">☰</button>
-      <div id="nav-links" role="list"></div>
-    </div>
-  </nav>
+  <div id="nav-placeholder"></div>
+  <script src="/nav-loader.js"></script>
 
   <!-- Hero -->
   <header class="hero" id="top">
@@ -61,6 +55,15 @@
 
   <!-- Main content — rendered by main.js -->
   <main id="main-content" aria-label="Resource categories"></main>
+
+  <!-- Tribal government callout -->
+  <div style="background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center;">
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <p style="font-weight: 700; font-size: 1.05rem; color: var(--text); margin-bottom: 0.4rem;">Tribal government?</p>
+      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 0.75rem;">We've pulled together the most relevant resources for staff and leadership evaluating AI policy.</p>
+      <a href="/for-tribal-governments.html" style="font-weight: 600; color: var(--accent); text-decoration: none;">Start here &rarr;</a>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">
