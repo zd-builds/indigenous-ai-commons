@@ -75,6 +75,26 @@ const RESOURCES = [
     region: "Canada",
     published: true
   },
+  {
+    id: "wasikan-kisewatisiwin",
+    title: "wâsikan kisewâtisiwin (AI With Heart)",
+    url: "https://www.wasikankisewatisiwin.ca/",
+    type: "project",
+    category: "indigenous-built-ai",
+    description: "Métis-built AI writing tool by Shani Gwin and Pipikwan Pêhtâkwan (Edmonton). Named in a ceremony by Elder Theresa Strawberry of O'Chiese First Nation -- wâsikan kisewâtisiwin means 'kind electricity' in Cree. Functions as a writing plug-in that identifies unconscious bias or racism directed at Indigenous Peoples and corrects it with factual information. Built to transfer the emotional labor of Indigenous education off Indigenous people and onto the systems that need to change. Trained and developed by Indigenous people.",
+    region: "Canada",
+    published: true
+  },
+  {
+    id: "saige",
+    title: "SAIGE -- Indigenous Scholarship Matching AI",
+    url: "https://mila.quebec/en/ai4humanity/applied-projects/saige",
+    type: "project",
+    category: "indigenous-built-ai",
+    description: "An AI-based scholarship matching tool created by and for Indigenous youth through Mila's Indigenous Pathfinders in AI program. Designed to reduce barriers to education funding while centering data sovereignty in how student data is stored and managed.",
+    region: "Canada",
+    published: true
+  },
 
   // COMMUNITY SOLUTIONS
 
@@ -177,6 +197,26 @@ const RESOURCES = [
     category: "community-solutions",
     description: "Annual career-pathway program for First Nations, Inuit, and Métis post-secondary students. Cohorts produce community-driven AI projects including language revitalization tools, data sovereignty platforms, and Indigenous food systems work.",
     region: "Canada",
+    published: true
+  },
+  {
+    id: "matritech",
+    title: "Matritech",
+    url: "https://matritech.org/",
+    type: "community",
+    category: "community-solutions",
+    description: "Indigenous women and Two-Spirit-led initiative founded at the Emergence Circle AI Retreat (Santa Fe, February 2026). Focused on tech discernment over tech adoption -- equipping Indigenous women and Two-Spirit leaders to evaluate, govern, and refuse AI technologies on sovereign terms. Grounded in relational ethics, gender justice, and Indigenous data sovereignty.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "matritech-report",
+    title: "Matritech Listening Sessions Report: Indigenous Women and Two-Spirit Perspectives on AI",
+    url: "https://matritech.org/s/Listening-Sessions-Report-Indigenous-Women-Two-Spirit-Perspectives-on-AI.pdf",
+    type: "paper",
+    category: "community-solutions",
+    description: "Primary research from four listening sessions with 11 Indigenous women and Two-Spirit participants on AI use, governance, and values. Key finding: community protection ranked as the top priority in all four sessions. Participants identified a distinct Indigenous women and Two-Spirit model of AI leadership rooted in relationality, stewardship, and collective responsibility rather than individual adoption.",
+    region: "United States",
     published: true
   },
   {

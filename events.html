@@ -3,64 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events — Indigenous AI Commons</title>
-  <meta name="description" content="Webinars, workshops, and conferences on AI, data sovereignty, and Indigenous community technology. This page tracks events from across the field. Registration links are added when available." />
+  <title>Events &amp; Trainings — Indigenous AI Commons</title>
+  <meta name="description" content="Upcoming and past events on AI, data sovereignty, and Indigenous community technology — webinars, workshops, trainings, and conferences." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-page="events">
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <nav class="site-nav" aria-label="Site navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-brand">Indigenous AI Commons</a>
-      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation">&#9776;</button>
-      <div id="nav-links" role="list"></div>
-    </div>
-  </nav>
+  <div id="nav-placeholder"></div>
+  <script src="/nav-loader.js"></script>
 
   <div class="page-header">
     <div class="page-header-inner">
       <a href="index.html" class="back-link">&larr; Home</a>
-      <h1 class="page-title">Events</h1>
+      <h1 class="page-title">Events &amp; Trainings</h1>
       <p class="page-description">
-        Webinars, workshops, and conferences on AI, data sovereignty, and Indigenous community technology. This page tracks events from across the field. Registration links are added when available.
+        Webinars, workshops, trainings, and conferences on AI, data sovereignty, and Indigenous community technology.
+        Registration links added when available; recording links added after events wrap up.
       </p>
     </div>
   </div>
 
-  <main id="main-content" aria-label="Events">
+  <main id="main-content" aria-label="Events and Trainings">
+
     <section class="gs-grid">
-      <div class="gs-grid-inner">
-        <h2 class="section-label" style="grid-column: 1 / -1">Upcoming</h2>
-
-        <a href="https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/" class="gs-card" target="_blank" rel="noopener noreferrer">
-          <div class="gs-card-label">April 29, 2026 &middot; Webinar</div>
-          <h2 class="gs-card-title">Qayak to Waka: Indigenous Intelligence in Motion</h2>
-          <p class="gs-card-desc">Collaboratory for Indigenous Data Governance / Indigenous Data Exchange. 2pm AZ.</p>
-          <span class="gs-card-cta">Register &rarr;</span>
-        </a>
-
-        <a href="https://aigi.org.au/event/indigenous-peoples-and-ai-defending-rights-shaping-futures" class="gs-card" target="_blank" rel="noopener noreferrer">
-          <div class="gs-card-label">August 12, 2026 &middot; Webinar</div>
-          <h2 class="gs-card-title">Indigenous Peoples and AI: Defending Rights, Shaping Futures</h2>
-          <p class="gs-card-desc">Australian Indigenous Governance Institute. Guest speakers from diverse Indigenous cultures explore how AI intersects with Indigenous rights and self-determination.</p>
-          <span class="gs-card-cta">Learn more &rarr;</span>
-        </a>
-
-        <a href="https://inihkd.com/inihkd-2026/" class="gs-card" target="_blank" rel="noopener noreferrer">
-          <div class="gs-card-label">November 9&ndash;13, 2026 &middot; Conference</div>
-          <h2 class="gs-card-title">INIHKD 2026: Reclaiming Indigenous Ecologies of Love for Future Generations</h2>
-          <p class="gs-card-desc">International Network of Indigenous Health, Wellness &amp; Development. Rarotonga, Cook Islands. Includes a dedicated track on advanced technologies and AI.</p>
-          <span class="gs-card-cta">Learn more &rarr;</span>
-        </a>
-
+      <div class="gs-grid-inner" id="upcoming-container">
+        <h2 class="section-label" style="grid-column:1/-1">Upcoming</h2>
       </div>
     </section>
 
-    <div class="gs-grid" style="padding-top: 0;">
-      <div style="max-width: var(--max-width); margin: 0 auto;">
-        <p>Past recordings are available on the <a href="https://www.youtube.com/@IndigenousDataAlliance">Indigenous Data Alliance YouTube channel</a>.</p>
+    <section class="gs-grid" style="padding-top:0">
+      <div class="gs-grid-inner" id="selfpaced-container">
+        <h2 class="section-label" style="grid-column:1/-1">Self-Paced Trainings</h2>
       </div>
-    </div>
+    </section>
+
+    <section class="gs-grid" id="past-section" style="padding-top:0">
+      <div class="gs-grid-inner" id="past-container">
+        <h2 class="section-label" style="grid-column:1/-1">Past Events</h2>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -92,11 +74,77 @@
     </div>
   </footer>
 
+  <script src="events-data.js"></script>
+  <script>
+    (function () {
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+      function fmtDate(date, dateEnd) {
+        const d = new Date(date + 'T12:00:00');
+        if (!dateEnd) return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+        const e = new Date(dateEnd + 'T12:00:00');
+        if (d.getMonth() === e.getMonth() && d.getFullYear() === e.getFullYear()) {
+          return `${months[d.getMonth()]} ${d.getDate()}&ndash;${e.getDate()}, ${e.getFullYear()}`;
+        }
+        return `${months[d.getMonth()]} ${d.getDate()} &ndash; ${months[e.getMonth()]} ${e.getDate()}, ${e.getFullYear()}`;
+      }
+
+      function isEventPast(event) {
+        const today = new Date(); today.setHours(0, 0, 0, 0);
+        return new Date((event.dateEnd || event.date) + 'T23:59:59') < today;
+      }
+
+      function eventCard(event, past) {
+        const href = event.recording || event.registerUrl || event.url;
+        const cta = event.recording ? 'Watch recording' : event.cta;
+        const badge = event.recording
+          ? `<span class="event-badge event-badge--recording">Recording available</span>`
+          : (past ? `<span class="event-badge event-badge--pending">Recording pending</span>` : '');
+        return `<a href="${href}" class="gs-card" target="_blank" rel="noopener noreferrer">
+          <div class="gs-card-label">${fmtDate(event.date, event.dateEnd)} &middot; ${event.type}${badge}</div>
+          <h2 class="gs-card-title">${event.title}</h2>
+          <p class="gs-card-desc">${event.org}. ${event.description}</p>
+          <span class="gs-card-cta">${cta} &rarr;</span>
+        </a>`;
+      }
+
+      function evergreenCard(event) {
+        return `<a href="${event.url}" class="gs-card" target="_blank" rel="noopener noreferrer">
+          <div class="gs-card-label">${event.type} &middot; ${event.org}</div>
+          <h2 class="gs-card-title">${event.title}</h2>
+          <p class="gs-card-desc">${event.description}</p>
+          <span class="gs-card-cta">${event.cta} &rarr;</span>
+        </a>`;
+      }
+
+      const upcoming = EVENTS_DATA.filter(e => !isEventPast(e));
+      const past = EVENTS_DATA.filter(isEventPast).reverse();
+
+      const upcomingEl = document.getElementById('upcoming-container');
+      const selfpacedEl = document.getElementById('selfpaced-container');
+      const pastEl = document.getElementById('past-container');
+      const pastSection = document.getElementById('past-section');
+
+      if (upcoming.length === 0) {
+        upcomingEl.insertAdjacentHTML('beforeend',
+          '<p style="grid-column:1/-1;color:var(--text-muted);font-size:0.9rem;">No upcoming events right now &mdash; check back soon.</p>');
+      } else {
+        upcomingEl.insertAdjacentHTML('beforeend', upcoming.map(e => eventCard(e, false)).join(''));
+      }
+
+      selfpacedEl.insertAdjacentHTML('beforeend', EVERGREEN_TRAININGS.map(evergreenCard).join(''));
+
+      if (past.length === 0) {
+        pastSection.hidden = true;
+      } else {
+        pastEl.insertAdjacentHTML('beforeend', past.map(e => eventCard(e, true)).join(''));
+      }
+    })();
+  </script>
   <script src="resources.js"></script>
   <script src="main.js"></script>
   <!-- GoatCounter -->
   <script data-goatcounter="https://zam-builds.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
-
 </body>
 </html>

@@ -53,6 +53,17 @@
     </p>
   </div>
 
+  <!-- Upcoming events strip -->
+  <section class="events-strip">
+    <div class="events-strip-inner">
+      <div class="events-strip-header">
+        <h2 class="events-strip-title">Upcoming Trainings &amp; Events</h2>
+        <a href="events.html" class="events-strip-viewall">View all &rarr;</a>
+      </div>
+      <div class="events-strip-grid" id="index-events"></div>
+    </div>
+  </section>
+
   <!-- Main content — static cards; main.js enhances with resource counts when JS loads -->
   <main id="main-content" aria-label="Resource categories">
     <section class="categories-overview" id="categories">
@@ -160,6 +171,39 @@
           async src="//gc.zgo.at/count.js"></script>
 
   <!-- Scripts -->
+  <script src="events-data.js"></script>
+  <script>
+    (function () {
+      const el = document.getElementById('index-events');
+      if (!el || typeof EVENTS_DATA === 'undefined') return;
+      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      function fmtDate(date, dateEnd) {
+        const d = new Date(date + 'T12:00:00');
+        if (!dateEnd) return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+        const e = new Date(dateEnd + 'T12:00:00');
+        if (d.getMonth() === e.getMonth() && d.getFullYear() === e.getFullYear()) {
+          return `${months[d.getMonth()]} ${d.getDate()}&ndash;${e.getDate()}, ${e.getFullYear()}`;
+        }
+        return `${months[d.getMonth()]} ${d.getDate()} &ndash; ${months[e.getMonth()]} ${e.getDate()}, ${e.getFullYear()}`;
+      }
+      const today = new Date(); today.setHours(0, 0, 0, 0);
+      const upcoming = EVENTS_DATA
+        .filter(e => new Date((e.dateEnd || e.date) + 'T23:59:59') >= today)
+        .slice(0, 3);
+      if (!upcoming.length) {
+        el.closest('.events-strip').style.display = 'none';
+        return;
+      }
+      el.innerHTML = upcoming.map(e =>
+        `<a href="${e.registerUrl || e.url}" class="gs-card" target="_blank" rel="noopener noreferrer">
+          <div class="gs-card-label">${fmtDate(e.date, e.dateEnd)} &middot; ${e.type}</div>
+          <h2 class="gs-card-title">${e.title}</h2>
+          <p class="gs-card-desc">${e.org}</p>
+          <span class="gs-card-cta">${e.cta} &rarr;</span>
+        </a>`
+      ).join('');
+    })();
+  </script>
   <script src="resources.js"></script>
   <script src="main.js"></script>
 

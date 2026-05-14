@@ -1,12 +1,12 @@
 // Indigenous AI Commons — Main JS (multi-page)
 
 const CATEGORIES = [
-  { id: "indigenous-built-ai",  title: "Indigenous-Built AI",  description: "Tools, models, and projects built from within communities." },
-  { id: "safer-ai-practices",   title: "Safer AI Practices",   description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing." },
-  { id: "community-solutions",  title: "Community Solutions",  description: "What tribes and Indigenous governments are actually implementing." },
-  { id: "data-as-culture",      title: "Data as Culture",      description: "Resources that treat data sovereignty as a living concept rooted in cultural values." },
-  { id: "academic-research",    title: "Academic Research",    description: "Papers, studies, and scholarly work on AI and Indigenous communities." },
-  { id: "global-resources",     title: "Global Resources",     description: "International examples, frameworks, and voices." }
+  { id: "indigenous-built-ai",  title: "Indigenous-Built AI",  descriptor: "Tools and systems designed and built by Indigenous people",                          description: "Tools, models, and projects built from within communities." },
+  { id: "safer-ai-practices",   title: "Safer AI Practices",   descriptor: "How to evaluate and use AI tools with your community's safety in mind",              description: "Before sharing data, signing agreements, or adopting AI tools — questions every community deserves to ask and answers worth knowing." },
+  { id: "community-solutions",  title: "Community Solutions",  descriptor: "Programs, approaches, and organizations supporting Indigenous communities",           description: "What tribes and Indigenous governments are actually implementing." },
+  { id: "data-as-culture",      title: "Data as Culture",      descriptor: "Why data sovereignty matters before the tools do",                                    description: "Resources that treat data sovereignty as a living concept rooted in cultural values." },
+  { id: "academic-research",    title: "Academic Research",    descriptor: "Peer-reviewed literature, reports, and scholarly frameworks",                         description: "Papers, studies, and scholarly work on AI and Indigenous communities." },
+  { id: "global-resources",     title: "Global Resources",     descriptor: "International Indigenous data governance work and frameworks",                        description: "International examples, frameworks, and voices." }
 ];
 
 const GS_TITLES = {
@@ -21,30 +21,6 @@ function getCurrentPage() {
   return document.body.getAttribute("data-page") || "index";
 }
 
-function renderNav() {
-  const current = getCurrentPage();
-  const isCategory = CATEGORIES.some(c => c.id === current) || current === "example-policies";
-
-  const dropdownItems = CATEGORIES.map(cat =>
-    `<a href="${cat.id}.html" class="nav-link nav-dropdown-item ${current === cat.id ? "active" : ""}" role="menuitem">${cat.title}</a>`
-  ).join("") +
-  `<hr role="presentation" style="border:none;border-top:1px solid var(--border-light);margin:0.25rem 0.5rem;" />` +
-  `<a href="resources/example-policies.html" class="nav-link nav-dropdown-item ${current === "example-policies" ? "active" : ""}" role="menuitem">Example Policies</a>`;
-
-  const resourcesDropdown = `
-    <div class="nav-dropdown${isCategory ? " active" : ""}">
-      <button class="nav-link nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-        Resources <span class="dropdown-caret" aria-hidden="true">&#9660;</span>
-      </button>
-      <div class="nav-dropdown-menu" role="menu">${dropdownItems}</div>
-    </div>`;
-
-  const getStartedLink = `<a href="get-started.html" class="nav-link nav-link--highlight ${current === "get-started" || current.startsWith("gs-") ? "active" : ""}">Go Deeper</a>`;
-  const eventsLink = `<a href="events.html" class="nav-link ${current === "events" ? "active" : ""}">Events</a>`;
-  const aboutLink = `<a href="about.html" class="nav-link ${current === "about" ? "active" : ""}">About</a>`;
-
-  document.getElementById("nav-links").innerHTML = resourcesDropdown + getStartedLink + eventsLink + aboutLink;
-}
 
 function renderBreadcrumb() {
   const current = getCurrentPage();
@@ -93,11 +69,19 @@ function renderHomePage() {
     return `
       <a href="${cat.id}.html" class="category-card">
         <h2 class="category-card-title">${cat.title}</h2>
+        <p class="category-descriptor">${cat.descriptor}</p>
         <p class="category-card-description">${cat.description}</p>
         <span class="category-card-cta">Explore ${count} resources &rarr;</span>
       </a>`;
   }).join("");
-  main.innerHTML = `<section class="categories-overview" id="categories"><div class="overview-inner"><div class="category-grid">${cards}</div></div></section>`;
+  const examplePoliciesCard = `
+      <a href="resources/example-policies.html" class="category-card">
+        <h2 class="category-card-title">Example Policies</h2>
+        <p class="category-descriptor">Adaptable templates and governance documents from Indigenous nations worldwide</p>
+        <p class="category-card-description">Foundational declarations, data sharing templates, governance frameworks, and research ethics protocols from Indigenous nations globally.</p>
+        <span class="category-card-cta">Browse documents &rarr;</span>
+      </a>`;
+  main.innerHTML = `<section class="categories-overview" id="categories"><div class="overview-inner"><div class="category-grid">${cards}${examplePoliciesCard}</div></div></section>`;
 }
 
 function renderCategoryPage(categoryId) {
@@ -121,49 +105,12 @@ function renderCategoryPage(categoryId) {
     </section>`;
 }
 
-function initMobileMenu() {
-  const toggle = document.getElementById("nav-toggle");
-  const navLinks = document.getElementById("nav-links");
-  if (!toggle || !navLinks) return;
-
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("open");
-    toggle.setAttribute("aria-expanded", navLinks.classList.contains("open") ? "true" : "false");
-  });
-
-  document.querySelectorAll(".nav-link:not(.nav-dropdown-toggle)").forEach(link => {
-    link.addEventListener("click", () => navLinks.classList.remove("open"));
-  });
-}
-
-function initDropdown() {
-  const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
-  if (!dropdownToggle) return;
-  const dropdown = dropdownToggle.closest(".nav-dropdown");
-
-  dropdownToggle.addEventListener("click", (e) => {
-    e.stopPropagation();
-    const isOpen = dropdown.classList.toggle("open");
-    dropdownToggle.setAttribute("aria-expanded", isOpen);
-  });
-
-  document.addEventListener("click", (e) => {
-    if (!e.target.closest(".nav-dropdown")) {
-      dropdown.classList.remove("open");
-      dropdownToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const page = getCurrentPage();
-  renderNav();
   renderBreadcrumb();
   if (page === "index") {
     renderHomePage();
   } else if (page !== "get-started" && !page.startsWith("gs-") && page !== "about" && page !== "events") {
     renderCategoryPage(page);
   }
-  initMobileMenu();
-  initDropdown();
 });
