@@ -34,7 +34,7 @@ const EVENTS_DATA = [
     date: "2026-03-25",
     type: "Webinar",
     org: "Collaboratory for Indigenous Data Governance / Indigenous Data Exchange",
-    description: "Hands-on demonstration of how to set up and run AI models on your own hardware &mdash; no cloud services, no data leaving your control. Speakers: Dr. Jane Anderson (NYU) and Zam DeShields (Chickasaw Nation).",
+    description: "Hands-on demonstration of how to set up and run AI models on your own hardware &mdash; no cloud services, no data leaving your control. Speakers: Zam DeShields (Chickasaw Nation) and Lydia Jennings (University of Arizona).",
     url: "https://indigenousdatalab.org/webinar-ai-on-your-terms-running-local-models-for-data-sovereignty/",
     cta: "View event",
     recording: "https://indigenousdatalab.org/webinar-ai-on-your-terms-running-local-models-for-data-sovereignty/"
