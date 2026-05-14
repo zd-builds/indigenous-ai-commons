@@ -7,7 +7,7 @@ const EVENTS_DATA = [
     description: "Practical strategies for Indigenous communities: secure data storage, offline models, and smaller language models using community-controlled datasets. Speakers: Dr. Jane Anderson (NYU) and Zam DeShields (Chickasaw Nation).",
     url: "https://indigenousdatalab.org/webinar-1its-never-going-to-be-a-non-issue-ai-and-indigenous-interests/",
     cta: "View event",
-    recording: "https://indigenousdatalab.org/webinar-1its-never-going-to-be-a-non-issue-ai-and-indigenous-interests/"
+    recording: "https://www.youtube.com/watch?v=T9Bd-Du-wyc"
   },
   {
     title: "The World&rsquo;s First Indigenous Data Standard: IEEE 2890-2025 Provenance of Indigenous Peoples&rsquo; Data",
@@ -17,7 +17,7 @@ const EVENTS_DATA = [
     description: "An introduction to IEEE 2890-2025, a standard for describing and recording the provenance of data about Indigenous Peoples and their cultures, lands, and knowledge systems. Speakers include Stephanie Carroll, Jane Anderson, Randy Akee, Camille Callison, and Maui Hudson.",
     url: "https://indigenousdatalab.org/webinar-the-worlds-first-indigenous-data-standard-ieee-2890-2025-provenance-of-indigenous-peoples-data/",
     cta: "View event",
-    recording: "https://indigenousdatalab.org/webinar-the-worlds-first-indigenous-data-standard-ieee-2890-2025-provenance-of-indigenous-peoples-data/"
+    recording: "https://www.youtube.com/watch?v=YOwGhq4gDkM"
   },
   {
     title: "Relational Data: Indigenous Data Governance in Global Biodiversity Applications",
@@ -27,7 +27,7 @@ const EVENTS_DATA = [
     description: "Examines how Indigenous governance frameworks &mdash; centered on collective stewardship, cultural authority, and territorial jurisdiction &mdash; can strengthen global biodiversity infrastructure. Speakers: Jane Anderson (NYU), Lydia Jennings (U of Arizona), and Ann McCartney.",
     url: "https://indigenousdatalab.org/webinar-relational-data-indigenous-data-governance-in-global-biodiversity-applications/",
     cta: "View event",
-    recording: "https://indigenousdatalab.org/webinar-relational-data-indigenous-data-governance-in-global-biodiversity-applications/"
+    recording: "https://www.youtube.com/watch?v=7WTcU3HQHyQ"
   },
   {
     title: "AI on Your Terms: Running Local Models for Data Sovereignty",
@@ -37,7 +37,7 @@ const EVENTS_DATA = [
     description: "Hands-on demonstration of how to set up and run AI models on your own hardware &mdash; no cloud services, no data leaving your control. Speakers: Zam DeShields (Chickasaw Nation) and Lydia Jennings (University of Arizona).",
     url: "https://indigenousdatalab.org/webinar-ai-on-your-terms-running-local-models-for-data-sovereignty/",
     cta: "View event",
-    recording: "https://indigenousdatalab.org/webinar-ai-on-your-terms-running-local-models-for-data-sovereignty/"
+    recording: "https://www.youtube.com/watch?v=1X7Auus4Keo"
   },
   {
     title: "Local Contexts TK &amp; BC Labels: Tools to Support Indigenous Cultural Authority &amp; Data Sovereignty",
@@ -47,7 +47,7 @@ const EVENTS_DATA = [
     description: "Introduces the Traditional Knowledge and Biocultural Labels &mdash; tools that enable communities to add provenance information, protocols, and permissions to data and collections. Speakers from Local Contexts including Hop Hopkins, Emily Santhanam, and Corrie Roe.",
     url: "https://indigenousdatalab.org/idx-webinar-local-contexts-tk-bc-labels-tools-to-support-indigenous-cultural-authority-idsov/",
     cta: "View event",
-    recording: "https://indigenousdatalab.org/idx-webinar-local-contexts-tk-bc-labels-tools-to-support-indigenous-cultural-authority-idsov/"
+    recording: "https://www.youtube.com/watch?v=S86csS0Teac"
   },
   {
     title: "Qayak to Waka: Indigenous Intelligence in Motion",
@@ -57,7 +57,7 @@ const EVENTS_DATA = [
     description: "Practitioner-focused conversation with Indigenous experts from M&amacr;ori, Yupik, and Samoan communities on applied data sovereignty. Speakers: Vanessa Raymond (Yupik), Tapunu&rsquo;u Vensel Margraff (Samoan), Lauren Decker (Yupik), and Pera Barrett (M&amacr;ori, founder of Kaha Create).",
     url: "https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/",
     cta: "View event",
-    recording: "https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/"
+    recording: "https://www.youtube.com/watch?v=zPiQGFI0dww"
   },
   {
     title: "Artificial Intelligence Foundations",
