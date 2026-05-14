@@ -1,5 +1,55 @@
 const EVENTS_DATA = [
   {
+    title: "&ldquo;It&rsquo;s Never Going To Be A Non-Issue&rdquo;: AI and Indigenous Interests",
+    date: "2026-02-11",
+    type: "Webinar",
+    org: "Collaboratory for Indigenous Data Governance / Indigenous Data Exchange",
+    description: "Practical strategies for Indigenous communities: secure data storage, offline models, and smaller language models using community-controlled datasets. Speakers: Dr. Jane Anderson (NYU) and Zam DeShields (Chickasaw Nation).",
+    url: "https://indigenousdatalab.org/webinar-1its-never-going-to-be-a-non-issue-ai-and-indigenous-interests/",
+    cta: "View event",
+    recording: "https://indigenousdatalab.org/webinar-1its-never-going-to-be-a-non-issue-ai-and-indigenous-interests/"
+  },
+  {
+    title: "The World&rsquo;s First Indigenous Data Standard: IEEE 2890-2025 Provenance of Indigenous Peoples&rsquo; Data",
+    date: "2026-02-18",
+    type: "Webinar",
+    org: "Collaboratory for Indigenous Data Governance / Indigenous Data Exchange",
+    description: "An introduction to IEEE 2890-2025, a standard for describing and recording the provenance of data about Indigenous Peoples and their cultures, lands, and knowledge systems. Speakers include Stephanie Carroll, Jane Anderson, Randy Akee, Camille Callison, and Maui Hudson.",
+    url: "https://indigenousdatalab.org/webinar-the-worlds-first-indigenous-data-standard-ieee-2890-2025-provenance-of-indigenous-peoples-data/",
+    cta: "View event",
+    recording: "https://indigenousdatalab.org/webinar-the-worlds-first-indigenous-data-standard-ieee-2890-2025-provenance-of-indigenous-peoples-data/"
+  },
+  {
+    title: "Relational Data: Indigenous Data Governance in Global Biodiversity Applications",
+    date: "2026-03-18",
+    type: "Webinar",
+    org: "Collaboratory for Indigenous Data Governance / Indigenous Data Exchange",
+    description: "Examines how Indigenous governance frameworks &mdash; centered on collective stewardship, cultural authority, and territorial jurisdiction &mdash; can strengthen global biodiversity infrastructure. Speakers: Jane Anderson (NYU), Lydia Jennings (U of Arizona), and Ann McCartney.",
+    url: "https://indigenousdatalab.org/webinar-relational-data-indigenous-data-governance-in-global-biodiversity-applications/",
+    cta: "View event",
+    recording: "https://indigenousdatalab.org/webinar-relational-data-indigenous-data-governance-in-global-biodiversity-applications/"
+  },
+  {
+    title: "AI on Your Terms: Running Local Models for Data Sovereignty",
+    date: "2026-03-25",
+    type: "Webinar",
+    org: "Collaboratory for Indigenous Data Governance / Indigenous Data Exchange",
+    description: "Hands-on demonstration of how to set up and run AI models on your own hardware &mdash; no cloud services, no data leaving your control. Speakers: Dr. Jane Anderson (NYU) and Zam DeShields (Chickasaw Nation).",
+    url: "https://indigenousdatalab.org/webinar-ai-on-your-terms-running-local-models-for-data-sovereignty/",
+    cta: "View event",
+    recording: "https://indigenousdatalab.org/webinar-ai-on-your-terms-running-local-models-for-data-sovereignty/"
+  },
+  {
+    title: "Local Contexts TK &amp; BC Labels: Tools to Support Indigenous Cultural Authority &amp; Data Sovereignty",
+    date: "2026-04-01",
+    type: "Webinar",
+    org: "Collaboratory for Indigenous Data Governance / Local Contexts",
+    description: "Introduces the Traditional Knowledge and Biocultural Labels &mdash; tools that enable communities to add provenance information, protocols, and permissions to data and collections. Speakers from Local Contexts including Hop Hopkins, Emily Santhanam, and Corrie Roe.",
+    url: "https://indigenousdatalab.org/idx-webinar-local-contexts-tk-bc-labels-tools-to-support-indigenous-cultural-authority-idsov/",
+    cta: "View event",
+    recording: "https://indigenousdatalab.org/idx-webinar-local-contexts-tk-bc-labels-tools-to-support-indigenous-cultural-authority-idsov/"
+  },
+  {
     title: "Qayak to Waka: Indigenous Intelligence in Motion",
     date: "2026-04-29",
     type: "Webinar",
@@ -7,7 +57,7 @@ const EVENTS_DATA = [
     description: "Part of the Indigenous Data Exchange webinar series.",
     url: "https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/",
     cta: "View event",
-    recording: null
+    recording: "https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/"
   },
   {
     title: "Artificial Intelligence Foundations",
