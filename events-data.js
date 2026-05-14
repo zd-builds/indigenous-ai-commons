@@ -54,7 +54,7 @@ const EVENTS_DATA = [
     date: "2026-04-29",
     type: "Webinar",
     org: "Collaboratory for Indigenous Data Governance / Indigenous Data Exchange",
-    description: "Part of the Indigenous Data Exchange webinar series.",
+    description: "Practitioner-focused conversation with Indigenous experts from M&amacr;ori, Yupik, and Samoan communities on applied data sovereignty. Speakers: Vanessa Raymond (Yupik), Tapunu&rsquo;u Vensel Margraff (Samoan), Lauren Decker (Yupik), and Pera Barrett (M&amacr;ori, founder of Kaha Create).",
     url: "https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/",
     cta: "View event",
     recording: "https://indigenousdatalab.org/idx-webinar-qayak-to-waka-indigenous-intelligence-in-motion/"
