@@ -71,6 +71,17 @@ const EVENTS_DATA = [
     recording: null
   },
   {
+    title: "w&acirc;sikan kisew&acirc;tisiwin &ndash; AI with Heart: How We Built an Indigenous-Led and Informed LLM",
+    date: "2026-06-04",
+    type: "Forum",
+    org: "CCIB Forum",
+    description: "Shani Gwin (CEO &amp; Founder, w&acirc;sikan kisew&acirc;tisiwin) explores how an Indigenous-led writing assistant was built to help communicators spot harmful phrasing, offer respectful rewrites, and explain why changes matter. Grounded in story stewardship, data sovereignty, and consent throughout the model lifecycle, the session introduces a model of &ldquo;matriarchal AI&rdquo; rooted in care and relationships rather than technical efficiency alone.",
+    url: "https://forum.ccib.ca/forum-agenda/",
+    registerUrl: "https://conference.ccib.ca/secure/portal/",
+    cta: "Register",
+    recording: null
+  },
+  {
     title: "Indigenous Perspectives on AI: Appropriation, Regulation, and Innovation",
     date: "2026-06-05",
     type: "Conference",
@@ -88,6 +99,17 @@ const EVENTS_DATA = [
     description: "Online workshop exploring how educators can evaluate generative AI tools through the Indigenous 5Rs framework: Respect, Relevance, Reciprocity, Responsibility, and Relationships.",
     url: "https://bccampus.ca/event/flo-workshop-genai-and-the-indigenous-5rs-framework/",
     cta: "Register",
+    recording: null
+  },
+  {
+    title: "ARDC Indigenous Data Governance Masterclass 2026",
+    date: "2026-06-18",
+    dateEnd: "2026-06-19",
+    type: "Masterclass",
+    org: "Australian Research Data Commons (ARDC)",
+    description: "Two-day in-person masterclass in Tarndanya/Adelaide (Kaurna Country) covering Indigenous Data Governance principles, curation of community collections, and the Indigenous Data Matrix. Free. Speakers include Distinguished Professor Marcia Langton.",
+    url: "https://ardc.edu.au/event/indigenous-data-governance-masterclass-2026/",
+    cta: "View event",
     recording: null
   },
   {

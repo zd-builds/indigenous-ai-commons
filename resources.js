@@ -86,6 +86,16 @@ const RESOURCES = [
     published: true
   },
   {
+    id: "fireweed-ai",
+    title: "Fireweed AI",
+    url: "https://www.fireweedai.ca/",
+    type: "project",
+    category: "indigenous-built-ai",
+    description: "Canadian company building sovereign AI infrastructure for Indigenous nations: on-premise deployment within client jurisdiction, policy drafting tools grounded in governance frameworks, Indigenous language preservation through community-owned models, and document analysis &mdash; with no third-party cloud access, telemetry, or cross-border data movement. Aligned with OCAP&reg; standards. Founded by Cole Robulack.",
+    region: "Canada",
+    published: true
+  },
+  {
     id: "saige",
     title: "SAIGE -- Indigenous Scholarship Matching AI",
     url: "https://mila.quebec/en/ai4humanity/applied-projects/saige",
