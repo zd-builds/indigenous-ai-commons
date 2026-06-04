@@ -551,7 +551,6 @@ const RESOURCES = [
     url: "https://iapp.org/news/a/data-repurposing-algorithmic-bias-and-indigenous-privacy-in-the-age-of-ai",
     type: "paper",
     category: "community-safeguards",
-    question: "What happens to your data after you share it?",
     description: "Data collected for one purpose is routinely repurposed for another without consent. For Indigenous communities, this has included governments profiting from the sale of community data. Understanding this pattern is essential before agreeing to any data collection.",
     region: "Canada",
     published: true
@@ -562,7 +561,6 @@ const RESOURCES = [
     url: "https://blog.gitguardian.com/chatgpt-security-concern/",
     type: "guide",
     category: "community-safeguards",
-    question: "What does ChatGPT do with your inputs?",
     description: "ChatGPT stores conversations and can use inputs for model training. Before using it for anything related to community knowledge, health, or legal matters, understand exactly what you are agreeing to.",
     region: "Global",
     published: true
@@ -573,15 +571,7 @@ const RESOURCES = [
     url: "https://github.com/microsoft/byol",
     type: "tool",
     category: "community-safeguards",
-    question: "Who controls the data in a technology partnership?",
-    description: "Questions to ask before any AI partnership:",
-    bullets: [
-      "Who owns the training data and any outputs?",
-      "Can your community exit the partnership and retrieve its data?",
-      "Are data governance terms publicly documented?",
-      "Does the license allow self-hosted, community-controlled deployment?",
-      "What happens to your data if the partnership ends?"
-    ],
+    description: "Before entering any AI partnership, ask: Who owns the training data and any outputs? Can your community exit the partnership and retrieve its data? Are data governance terms publicly documented? Does the license allow self-hosted, community-controlled deployment? What happens to your data if the partnership ends?",
     region: "Global",
     published: true
   },
@@ -592,7 +582,6 @@ const RESOURCES = [
     type: "framework",
     category: "community-safeguards",
     featured: true,
-    question: "What does genuine community data consent look like?",
     description: "The Kaitiakitanga License treats data as something cared for rather than owned. Any benefit derived flows back to the source community. A working model for what community-controlled AI partnerships can look like.",
     region: "Aotearoa New Zealand",
     published: true
@@ -603,7 +592,6 @@ const RESOURCES = [
     url: "https://www.ada.gov/resources/ai-guidance/",
     type: "guide",
     category: "community-safeguards",
-    question: "What legal protections apply when AI affects services?",
     description: "Federal guidance confirms AI systems must comply with the Americans with Disabilities Act. Legal protections exist even when they are not enforced. Know your rights before AI tools are deployed in any service context.",
     region: "United States",
     published: true
@@ -614,7 +602,6 @@ const RESOURCES = [
     url: "https://ai-problems-index.vercel.app/",
     type: "guide",
     category: "community-safeguards",
-    question: "How do you separate legitimate AI concerns from hype?",
     description: "A comprehensive index of real AI problems, misconceptions, and cognitive fallacies. Useful for evaluating AI claims and identifying which concerns deserve resources and attention.",
     region: "Global",
     published: true
@@ -625,19 +612,16 @@ const RESOURCES = [
     url: "https://blog.gitguardian.com/github-copilot-security-and-privacy/",
     type: "guide",
     category: "community-safeguards",
-    question: "What leaves your environment when using AI coding tools?",
     description: "GitHub Copilot accesses code and context beyond what you explicitly prompt. Before using it on community projects, understand what it can see and what may leave your environment.",
     region: "Global",
     published: true
   },
-
   {
     id: "digitalapplied-local-llm",
     title: "Digital Applied: Local LLM Deployment Privacy Guide",
     url: "https://www.digitalapplied.com/blog/local-llm-deployment-privacy-guide-2025",
     type: "guide",
     category: "community-safeguards",
-    question: "How do you evaluate whether a local AI tool is actually private?",
     description: "Not all local AI tools are equal on privacy. This guide evaluates tools across six privacy criteria and flags that closed-source options like LM Studio have audit limitations. For communities with compliance requirements, open-source tools like Ollama and llama.cpp are recommended.",
     region: "Global",
     published: true
@@ -648,7 +632,6 @@ const RESOURCES = [
     url: "https://www.snitchbench.com/dashboard",
     type: "tool",
     category: "community-safeguards",
-    question: "Could your AI report your conversations to authorities?",
     description: "A benchmark that tests how aggressively different AI models report user conversations to the FBI, FDA, or media. Some cloud models contact authorities after a single message. For Indigenous communities with well-founded concerns about federal surveillance, this is not hypothetical — it is a documented behavior of cloud AI systems.",
     region: "Global",
     published: true
