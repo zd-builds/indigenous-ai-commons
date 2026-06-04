@@ -107,6 +107,29 @@ const RESOURCES = [
     published: true
   },
 
+  {
+    id: "cherokee-salmon-monitoring",
+    title: "Cherokee Nation AI Salmon Monitoring System",
+    url: "#",
+    type: "project",
+    category: "indigenous-innovations",
+    featured: false,
+    description: "A computer-vision machine learning model paired with traditional physical weir designs to manage environmental sovereignty entirely under community cultural values.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "project-adi-vaani",
+    title: "Project Adi Vaani Language Roadmap",
+    url: "#",
+    type: "project",
+    category: "indigenous-innovations",
+    featured: false,
+    description: "A collaborative real-time AI translation initiative supporting tribal languages, driven and validated by Tribal Research Institutes to protect oral traditions.",
+    region: "Global",
+    published: true
+  },
+
   // LEARNING & GATHERING GROUND (community solutions)
 
   {
@@ -450,12 +473,47 @@ const RESOURCES = [
     published: true
   },
   {
+    id: "ssn-ai-indigenous-sovereignty",
+    title: "Scholars Strategy Network: AI Policy Must Respect Indigenous Data Sovereignty",
+    url: "#",
+    type: "paper",
+    category: "learning-gathering-ground",
+    featured: false,
+    description: "A critical brief demonstrating the core differences between Western “privacy” and Indigenous “sovereignty,” and why standard notice models fail communities.",
+    region: "United States",
+    published: true
+  },
+
+  {
     id: "yanchapaxi-murphy-2025",
     title: "Indigenous Environmental Data Justice: Confronting Colonial Data and Activating Indigenous Sovereignty",
     url: "https://journals.sagepub.com/doi/10.1177/01622439251343837",
     type: "paper",
     category: "learning-gathering-ground",
     description: "Yanchapaxi and Murphy (2025) in Science, Technology, and Human Values. Frameworks Indigenous Environmental Data Justice as distinct from Environmental Data Justice, centering place-based, community-led data sovereignty practices. Treats data as relational rather than extractive.",
+    region: "Global",
+    published: true
+  },
+
+  {
+    id: "yurok-information-sharing-2026",
+    title: "Yurok Tribe Information Sharing Agreement Template (2026)",
+    url: "#",
+    type: "framework",
+    category: "cultural-data-sovereignty",
+    featured: false,
+    description: "An open legal toolkit model governing the collection and use of culturally sensitive information to prevent unauthorized third-party generative AI scraping.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "govlab-gida-readings-2026",
+    title: "GovLab/GIDA: Selected Readings on Indigenous Data Governance (2026 Update)",
+    url: "#",
+    type: "paper",
+    category: "cultural-data-sovereignty",
+    featured: false,
+    description: "A curated literature review tracking the operational implementation of the CARE Principles and traditional knowledge labels under generative AI pressures.",
     region: "Global",
     published: true
   },
@@ -544,6 +602,29 @@ const RESOURCES = [
   },
 
   // COMMUNITY SAFEGUARDS & POLICY
+
+  {
+    id: "brookings-tribal-sovereignty-2026",
+    title: "Brookings Report: Defining Digital Sovereignty for Tribal Nations in the AI Age (2026)",
+    url: "#",
+    type: "paper",
+    category: "community-safeguards",
+    featured: false,
+    description: "A policy framework detailing legal agreements, data protection codes, and unified digital governance strategies built specifically for Tribal Nations navigating AI.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "niaa-ai-transparency-2026",
+    title: "NIAA Artificial Intelligence Transparency Statement (2026)",
+    url: "#",
+    type: "framework",
+    category: "community-safeguards",
+    featured: false,
+    description: "A public agency blueprint showing how to strictly apply Indigenous Data Sovereignty rules to enterprise AI use, mapping out where AI is restricted in community decision-making.",
+    region: "Australia",
+    published: true
+  },
 
   {
     id: "iapp-data-repurposing",
