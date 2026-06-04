@@ -418,3 +418,99 @@ a:hover { color:var(--accent-hover); }
   .nav-dropdown.open .nav-dropdown-menu { display: flex; flex-direction: column; flex-wrap: nowrap; }
   .nav-dropdown-item { font-size: 0.85rem; padding: 0.45rem 0.6rem; white-space: normal; width: 100%; }
 }
+
+/* ── Resource card — data attributes + featured badge ────────────────────── */
+.resource-card { position: relative; }
+.resource-card[data-featured="true"] {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+.resource-card[data-featured="true"]::before {
+  content: "Recommended";
+  position: absolute;
+  top: -1px;
+  right: 1.25rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.18rem 0.55rem;
+  border-radius: 0 0 4px 4px;
+  pointer-events: none;
+}
+/* Accent-background pages: override featured badge so it stays visible */
+.page-resources--accent .resource-card[data-featured="true"] { border-color: rgba(255,255,255,0.6); }
+.page-resources--accent .resource-card[data-featured="true"]::before { background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); }
+
+/* ── Section callout / secondary funnel boxes ────────────────────────────── */
+.callout-box {
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0 1rem;
+}
+.callout-box--connect {
+  background: #E8F4F4;
+  border: 1px solid #9DD4D3;
+  border-left: 4px solid var(--accent-light);
+}
+.callout-box--advisory {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+}
+.callout-box-eyebrow {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.callout-box--advisory .callout-box-eyebrow { color: var(--accent); }
+.callout-box-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.callout-box-body {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: 1.1rem;
+  max-width: 640px;
+}
+.callout-box .btn--sm {
+  font-size: 0.82rem;
+  padding: 0.55rem 1.1rem;
+}
+
+/* ── Policy link card (community-safeguards → example-policies) ──────────── */
+.policy-link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.15s;
+  box-shadow: var(--shadow);
+  margin-bottom: 2.5rem;
+}
+.policy-link-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); color: inherit; }
+.policy-link-card-text {}
+.policy-link-card-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; display: block; }
+.policy-link-card-title { font-size: 1.05rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; line-height: 1.25; }
+.policy-link-card-desc { font-size: 0.875rem; color: var(--text-secondary); margin-top: 0.3rem; line-height: 1.6; }
+.policy-link-card-cta { font-size: 0.85rem; font-weight: 600; color: var(--accent); white-space: nowrap; flex-shrink: 0; }
+.policy-link-card:hover .policy-link-card-cta { color: var(--accent-hover); }

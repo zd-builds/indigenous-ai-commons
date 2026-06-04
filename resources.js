@@ -2,14 +2,14 @@
 
 const RESOURCES = [
 
-  // INDIGENOUS-BUILT AI
+  // INDIGENOUS INNOVATIONS
 
   {
     id: "temarama-ai",
     title: "Temarama AI",
     url: "https://temaramaai.com/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "An Indigenous-led AI project centering Māori values, language, and sovereignty, built with data governance frameworks that keep community knowledge under community control.",
     region: "Aotearoa New Zealand",
     published: true
@@ -19,7 +19,8 @@ const RESOURCES = [
     title: "Te Hiku Media",
     url: "https://tehiku.nz/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
+    featured: true,
     description: "Māori-led broadcaster that built te reo Māori speech recognition AI with 92% accuracy. Governed by the Kaitiakitanga License: data is cared for, not owned. Any benefit flows back to the community.",
     region: "Aotearoa New Zealand",
     published: true
@@ -29,7 +30,7 @@ const RESOURCES = [
     title: "Animikii Indigenous Technology",
     url: "https://animikii.com/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "Indigenous-owned technology company building digital solutions for and with Indigenous communities, grounded in Indigenous values and self-determination.",
     region: "Canada",
     published: true
@@ -39,7 +40,7 @@ const RESOURCES = [
     title: "NativeBio Data",
     url: "https://www.nativebio.org/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "The first Indigenous-led genomic biorepository on sovereign Native American land (Cheyenne River Sioux Reservation), centering Indigenous sovereignty and Indigenous data governance in health and science research.",
     region: "United States",
     published: true
@@ -49,7 +50,7 @@ const RESOURCES = [
     title: "Semwise",
     url: "https://semwise.org/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "Indigenous-focused technology organization developing tools and frameworks for community-controlled AI and data sovereignty.",
     region: "Global",
     published: true
@@ -60,7 +61,7 @@ const RESOURCES = [
     title: "SkoBots — Indigenous Language Revitalization Robot",
     url: "https://www.steamconnection.org/skobots",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "Wearable, AI-powered robots designed to teach endangered Indigenous languages to youth. Built by Danielle Boyer (Ojibwe, Sault Ste Marie Tribe of Chippewa Indians), distributed free to Indigenous schools and organizations. Uses internally-developed AI that functions without Wi-Fi, designed for communities with limited connectivity.",
     region: "United States",
     published: true
@@ -70,7 +71,7 @@ const RESOURCES = [
     title: "FLAIR (First Languages AI Reality), Mila Quebec",
     url: "https://mila.quebec/en/ai4humanity/applied-projects/first-languages-ai-reality",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "Indigenous-led voice AI for endangered language revitalization, built with data sovereignty and linguistic self-determination at its core. Open source. Led by Michael Running Wolf.",
     region: "Canada",
     published: true
@@ -80,7 +81,7 @@ const RESOURCES = [
     title: "wâsikan kisewâtisiwin (AI With Heart)",
     url: "https://www.wasikankisewatisiwin.ca/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "Métis-built AI writing tool by Shani Gwin and Pipikwan Pêhtâkwan (Edmonton). Named in a ceremony by Elder Theresa Strawberry of O'Chiese First Nation -- wâsikan kisewâtisiwin means 'kind electricity' in Cree. Functions as a writing plug-in that identifies unconscious bias or racism directed at Indigenous Peoples and corrects it with factual information. Built to transfer the emotional labor of Indigenous education off Indigenous people and onto the systems that need to change. Trained and developed by Indigenous people.",
     region: "Canada",
     published: true
@@ -90,7 +91,7 @@ const RESOURCES = [
     title: "Fireweed AI",
     url: "https://www.fireweedai.ca/",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "Canadian company building sovereign AI infrastructure for Indigenous nations: on-premise deployment within client jurisdiction, policy drafting tools grounded in governance frameworks, Indigenous language preservation through community-owned models, and document analysis &mdash; with no third-party cloud access, telemetry, or cross-border data movement. Aligned with OCAP&reg; standards. Founded by Cole Robulack.",
     region: "Canada",
     published: true
@@ -100,20 +101,20 @@ const RESOURCES = [
     title: "SAIGE -- Indigenous Scholarship Matching AI",
     url: "https://mila.quebec/en/ai4humanity/applied-projects/saige",
     type: "project",
-    category: "indigenous-built-ai",
+    category: "indigenous-innovations",
     description: "An AI-based scholarship matching tool created by and for Indigenous youth through Mila's Indigenous Pathfinders in AI program. Designed to reduce barriers to education funding while centering data sovereignty in how student data is stored and managed.",
     region: "Canada",
     published: true
   },
 
-  // COMMUNITY SOLUTIONS
+  // LEARNING & GATHERING GROUND (community solutions)
 
   {
     id: "fntc-ai",
     title: "First Nations Technology Council — AI Adoption Initiative",
     url: "https://www.technologycouncil.ca/research/digital-transformation-ai/",
     type: "community",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Community-driven research and free AI resources for First Nations in BC, built from what communities said they need. Developing an open-source AI toolkit informed by Indigenous knowledge systems.",
     region: "Canada",
     published: true
@@ -123,7 +124,7 @@ const RESOURCES = [
     title: "First Nations Technology Council — Pathways to AI",
     url: "https://www.technologycouncil.ca/pathways-to-ai/",
     type: "guide",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Free, self-paced 1.5-hour course designed specifically for Indigenous people and Indigenous-serving organizations. Covers how AI works, practical use of tools like ChatGPT and Copilot, and critical concerns including bias, data misuse, and protection of sacred knowledge — framed through relationality, OCAP®, and data sovereignty. No prerequisites, certificate on completion.",
     region: "Canada",
     published: true
@@ -133,7 +134,7 @@ const RESOURCES = [
     title: "Cherokee Nation AI Task Force",
     url: "https://www.cherokee.org/all-services/tribal-technology/",
     type: "community",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "The Cherokee Nation established an AI task force and governance committees to evaluate AI against Cherokee values before adoption. Companies must complete an AI questionnaire before working with the Nation. Data literacy programs extend these protections community-wide.",
     region: "United States",
     published: true
@@ -143,7 +144,7 @@ const RESOURCES = [
     title: "Wiring the Rez — Tribal Nations and Digital Sovereignty",
     url: "https://law.asu.edu/newsroom/wiring-rez-tribal-nations-claim-their-digital-futures",
     type: "community",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Annual conference where Indigenous leaders, legal experts, and community members develop policy and practice on digital sovereignty. 2026 theme: infrastructure is sovereignty in action, including AI infrastructure.",
     region: "United States",
     published: true
@@ -153,7 +154,7 @@ const RESOURCES = [
     title: "Tribal Digital Sovereignty Guidebook",
     url: "https://apps.law.asu.edu/FB/Tribal-Digital-Sovereignty-Guidebook-November-2025/",
     type: "guide",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Practical guide for Indigenous nations on broadband, spectrum sovereignty, data governance, and AI, framing digital infrastructure as an instrument of self-determination. From ASU's American Indian Policy Institute.",
     region: "United States",
     published: true
@@ -163,7 +164,7 @@ const RESOURCES = [
     title: "Niiwin — DataBack Fellowship",
     url: "https://niiwin.app/blog/the-databack-fellowship-for-organizations-ready-to-do-data-right",
     type: "community",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Fellowship for organizations ready to return data to Indigenous communities. A model of what accountability and data stewardship actually look like in practice.",
     region: "Canada",
     published: true
@@ -173,7 +174,7 @@ const RESOURCES = [
     title: "ASU AIPI — Proactive Solutions for Tribal Digital Sovereignty",
     url: "https://aipi.asu.edu/blog/2026/02/proactive-solutions-implementing-tribal-digital-sovereignty",
     type: "guide",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "From Arizona State University's American Indian Policy Institute, a 2026 analysis of implementation strategies Indigenous nations are using to assert digital sovereignty, covering governance structures, data policies, and AI decision frameworks.",
     region: "United States",
     published: true
@@ -183,7 +184,7 @@ const RESOURCES = [
     title: "Conservation Metrics",
     url: "https://conservationmetrics.com/",
     type: "tool",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Technology tools supporting Indigenous and local communities in monitoring and stewarding their lands and waters, with community-controlled data and decision-making.",
     region: "Global",
     published: true
@@ -194,7 +195,7 @@ const RESOURCES = [
     title: "Cherokee Nation AI Policy — Full Document",
     url: "https://www.cherokee.org/media/fo4pcqvz/cherokee-nation-information-technology-artificial-intelligence-ai-policy.pdf",
     type: "framework",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "The policy document signed by Principal Chief Chuck Hoskin Jr. in August 2025 — one of the first comprehensive Indigenous AI governance frameworks. Covers approved uses, cultural protections (Cherokee language requires fluent speaker oversight), governance committee structure, and data protection requirements. A working model other nations can adapt.",
     region: "United States",
     published: true
@@ -204,7 +205,7 @@ const RESOURCES = [
     title: "Indigenous Pathfinders in AI, Mila + Indspire",
     url: "https://mila.quebec/en/ai4humanity/ai-governance-policy-and-inclusion/indigenous-pathfinders-in-ai",
     type: "community",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Annual career-pathway program for First Nations, Inuit, and Métis post-secondary students. Cohorts produce community-driven AI projects including language revitalization tools, data sovereignty platforms, and Indigenous food systems work.",
     region: "Canada",
     published: true
@@ -214,7 +215,7 @@ const RESOURCES = [
     title: "Matritech",
     url: "https://matritech.org/",
     type: "community",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Indigenous women and Two-Spirit-led initiative founded at the Emergence Circle AI Retreat (Santa Fe, February 2026). Focused on tech discernment over tech adoption -- equipping Indigenous women and Two-Spirit leaders to evaluate, govern, and refuse AI technologies on sovereign terms. Grounded in relational ethics, gender justice, and Indigenous data sovereignty.",
     region: "United States",
     published: true
@@ -224,7 +225,7 @@ const RESOURCES = [
     title: "Matritech Listening Sessions Report: Indigenous Women and Two-Spirit Perspectives on AI",
     url: "https://matritech.org/s/Listening-Sessions-Report-Indigenous-Women-Two-Spirit-Perspectives-on-AI.pdf",
     type: "paper",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Primary research from four listening sessions with 11 Indigenous women and Two-Spirit participants on AI use, governance, and values. Key finding: community protection ranked as the top priority in all four sessions. Participants identified a distinct Indigenous women and Two-Spirit model of AI leadership rooted in relationality, stewardship, and collective responsibility rather than individual adoption.",
     region: "United States",
     published: true
@@ -234,20 +235,20 @@ const RESOURCES = [
     title: "Jeff Doctor: Are Individualistic Data Policies and Designs Fuelling Digital Colonialism?",
     url: "https://vimeo.com/653038251",
     type: "guide",
-    category: "community-solutions",
+    category: "learning-gathering-ground",
     description: "Cayuga technologist Jeff Doctor (Animikii) on how individualistic data frameworks reproduce colonial logic, and what Indigenous data sovereignty demands instead. MyData Canada, 2021.",
     region: "Canada",
     published: true
   },
 
-  // DATA AS CULTURE
+  // CULTURAL & DATA SOVEREIGNTY
 
   {
     id: "ict-data-as-land",
     title: "Treating Data Like Land: Data Sovereignty in the AI Age",
     url: "https://ictnews.org/news/treating-data-like-land-data-sovereignty-in-the-ai-age/",
     type: "paper",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "Indigenous news analysis grounding data sovereignty in the relationship between land and identity. Data is a cultural resource with its own relationships and responsibilities.",
     region: "United States",
     published: true
@@ -257,7 +258,8 @@ const RESOURCES = [
     title: "Local Contexts",
     url: "https://localcontexts.org/",
     type: "framework",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
+    featured: true,
     description: "A global framework of Traditional Knowledge (TK) and Biocultural (BC) Labels and Notices that lets Indigenous communities define cultural protocols for their data, collections, and knowledge. Used in archives, museums, and research platforms worldwide.",
     region: "Global",
     published: true
@@ -267,7 +269,7 @@ const RESOURCES = [
     title: "IDIA — Decolonised Research Framework",
     url: "https://www.idia.nz/toolkit/decolonised-research-framework",
     type: "framework",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "Framework from Indigenous Design and Innovation Aotearoa covering the full research lifecycle, from project inception through data storage, with Māori concepts like tapu and noa shaping how knowledge is organized and shared.",
     region: "Aotearoa New Zealand",
     published: true
@@ -277,7 +279,7 @@ const RESOURCES = [
     title: "IDIA — Culture Centred Design",
     url: "https://www.idia.nz/toolkit/culture-centred-design",
     type: "framework",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "A design methodology that critiques human-centred design as colonizing and builds a genuine alternative. About Indigenous peoples building their own futures, not just accessing existing systems.",
     region: "Aotearoa New Zealand",
     published: true
@@ -287,7 +289,7 @@ const RESOURCES = [
     title: "Niiwin — Understanding Indigenous Data",
     url: "https://niiwin.app/blog/understanding-indigenous-data-what-are-data",
     type: "guide",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "Accessible explanation of what Indigenous data is: relationships, living knowledge, and collective identity.",
     region: "Canada",
     published: true
@@ -297,7 +299,7 @@ const RESOURCES = [
     title: "ARDC — Indigenous Data Resources",
     url: "https://ardc.edu.au/resource/indigenous-data/",
     type: "guide",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "Australian Research Data Commons resources on Indigenous data sovereignty, governance frameworks, and community rights over research data.",
     region: "Australia",
     published: true
@@ -307,7 +309,7 @@ const RESOURCES = [
     title: "CTLT Indigenous Initiatives — AI Reflections",
     url: "https://indigenousinitiatives.ctlt.ubc.ca/2025/11/19/ai-reflections-indigenous-data-sovereignty-and-artificial-intelligence/",
     type: "guide",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "Curated resource collection from UBC Indigenous Initiatives bringing together Indigenous scholar voices, community examples, and frameworks connecting data sovereignty to AI governance.",
     region: "Canada",
     published: true
@@ -317,20 +319,21 @@ const RESOURCES = [
     title: "Indigenous Data Network Australia",
     url: "https://idnau.org/resources",
     type: "community",
-    category: "data-as-culture",
+    category: "cultural-data-sovereignty",
     description: "Australian network building Indigenous data sovereignty capacity, connecting researchers, communities, and policymakers around the principle of community-controlled data governance.",
     region: "Australia",
     published: true
   },
 
-  // ACADEMIC RESEARCH
+  // LEARNING & GATHERING GROUND (academic research)
 
   {
     id: "indigenous-protocol-ai-2020",
     title: "Indigenous Protocol and Artificial Intelligence — Position Paper",
     url: "https://spectrum.library.concordia.ca/id/eprint/986506/7/Indigenous_Protocol_and_AI_2020.pdf",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
+    featured: true,
     description: "Foundational 2020 position paper from the Indigenous Protocol and AI Working Group. The first sustained Indigenous-led engagement with AI as a site of governance, cultural responsibility, and epistemic sovereignty.",
     region: "Global",
     published: true
@@ -340,7 +343,7 @@ const RESOURCES = [
     title: "Te Taka — Māori LLM Report",
     url: "https://www.waikato.ac.nz/assets/Uploads/Research/Research-institutes-centres-and-groups/Entities/Te-Mata-Punenga-o-Te-Kotahi-Te-Kotahi-Research-Institute-TKRI/Maori-LLM-report-final-TeTaka.pdf",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "University of Waikato research on what building a Māori LLM would actually require, from a Māori institution's perspective, centering language sovereignty and community consent throughout.",
     region: "Aotearoa New Zealand",
     published: true
@@ -350,7 +353,7 @@ const RESOURCES = [
     title: "BYOL: Bring Your Own Language Into LLMs",
     url: "https://arxiv.org/abs/2601.10804",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Microsoft AI for Good Lab paper on adapting LLMs to low-resource languages including Inuktitut, Māori, and Chichewa. Read alongside Māori and Indigenous-led perspectives on what 'low resource' means and who defines it.",
     region: "Global",
     published: true
@@ -360,7 +363,7 @@ const RESOURCES = [
     title: "SSHRC — Abundant Intelligences: Inclusive AI",
     url: "https://sshrc-crsh.gc.ca/funding-financement/nfrf-fnfr/stories-histoires/2023/inclusive_artificial_intelligence-intelligence_artificielle_inclusive-eng.aspx",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "$22M Indigenous-led research project at Concordia University expanding AI's definition of intelligence to include Indigenous knowledge systems.",
     region: "Canada",
     published: true
@@ -370,7 +373,7 @@ const RESOURCES = [
     title: "Data Repurposing, Algorithmic Bias and Indigenous Privacy in the Age of AI",
     url: "https://iapp.org/news/a/data-repurposing-algorithmic-bias-and-indigenous-privacy-in-the-age-of-ai",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Analysis of how First Nations data is collected for one purpose and repurposed for another without consent, including cases where the Crown has profited from selling Indigenous data. Argues for collective information regimes under Indigenous governance.",
     region: "Canada",
     published: true
@@ -380,7 +383,7 @@ const RESOURCES = [
     title: "Indigenous Peoples and AI: A Systematic Review",
     url: "https://journals.sagepub.com/doi/10.1177/20539517251349170",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "A comprehensive systematic review of AI and Indigenous Knowledge Systems, covering language revitalization, health, environmental monitoring, and the risks of data extraction and cultural erasure.",
     region: "Global",
     published: true
@@ -390,7 +393,7 @@ const RESOURCES = [
     title: "AI Affects Everyone, Including Indigenous People — It's Time We Have a Say",
     url: "https://theconversation.com/ai-affects-everyone-including-indigenous-people-its-time-we-have-a-say-in-how-its-built-239605",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Accessible academic argument for meaningful Indigenous participation in AI development: decision-making authority from the start, not consultation after the fact.",
     region: "Global",
     published: true
@@ -400,7 +403,7 @@ const RESOURCES = [
     title: "Sovereignty in the Digital Age: Indigenous Health Data and Emerging Technologies",
     url: "https://www.sciencedirect.com/science/article/pii/S2667321525001775",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Indigenous scholars and communities examine blockchain, federated learning, and AI through ecological, cultural, and spiritual lenses, arguing that digital tools must be reconceptualized through Indigenous knowledge systems rather than assumed compatible with them.",
     region: "Global",
     published: true
@@ -410,7 +413,7 @@ const RESOURCES = [
     title: "Sovereign Snapshot: AI in a Tribal Context",
     url: "https://www.ou.edu/nativenationscenter/research/sovereign-snapshot-ai-in-a-tribal-context",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Peer-reviewed literature review from the University of Oklahoma Native Nations Center surveying how Indigenous nations are engaging AI for self-determination, with examples of community-controlled implementations.",
     region: "United States",
     published: true
@@ -420,7 +423,7 @@ const RESOURCES = [
     title: "TechReg — Indigenous Data and Technology Regulation",
     url: "https://techreg.org/article/view/19593",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Academic analysis of Indigenous data sovereignty within technology regulation frameworks, examining the gaps between existing law and the rights communities actually hold.",
     region: "Global",
     published: true
@@ -431,7 +434,7 @@ const RESOURCES = [
     title: "Making Kin with the Machines",
     url: "https://jods.mitpress.mit.edu/pub/lewis-arista-pechawis-kite/release/1",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Award-winning 2018 essay by Jason Edward Lewis, Noelani Arista, Archer Pechawis, and Suzanne Kite in MIT Press Journal of Design and Science. Proposes drawing on Indigenous kinship protocols to reimagine the epistemological foundations of AI — arguing that centering human well-being alone is too narrow and that AI belongs within an extended circle of relationships.",
     region: "Global",
     published: true
@@ -441,7 +444,7 @@ const RESOURCES = [
     title: "Abundant Intelligences — Research Program",
     url: "https://abundant-intelligences.net/",
     type: "project",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Indigenous-led, Indigenous-majority international research program imagining how AI could be conceptualized and designed from Indigenous knowledge systems. Led by Jason Edward Lewis (Concordia University) in partnership with Mila Quebec AI Institute. A $22M SSHRC-funded initiative.",
     region: "Global",
     published: true
@@ -451,20 +454,20 @@ const RESOURCES = [
     title: "Indigenous Environmental Data Justice: Confronting Colonial Data and Activating Indigenous Sovereignty",
     url: "https://journals.sagepub.com/doi/10.1177/01622439251343837",
     type: "paper",
-    category: "academic-research",
+    category: "learning-gathering-ground",
     description: "Yanchapaxi and Murphy (2025) in Science, Technology, and Human Values. Frameworks Indigenous Environmental Data Justice as distinct from Environmental Data Justice, centering place-based, community-led data sovereignty practices. Treats data as relational rather than extractive.",
     region: "Global",
     published: true
   },
 
-  // GLOBAL RESOURCES
+  // CULTURAL & DATA SOVEREIGNTY (from global resources)
 
   {
     id: "ohchr-sovereignty-ai",
     title: "OHCHR — Indigenous Sovereignty in the AI Era",
     url: "https://www.ohchr.org/en/stories/2025/08/indigenous-sovereignty-ai-era",
     type: "guide",
-    category: "global-resources",
+    category: "cultural-data-sovereignty",
     description: "UN Human Rights coverage of Indigenous perspectives from the 2025 Expert Mechanism session, centering community voices on AI, cultural data, and self-determination.",
     region: "Global",
     published: true
@@ -474,7 +477,7 @@ const RESOURCES = [
     title: "UN DESA — Ensuring Indigenous Peoples' Rights in the Age of AI",
     url: "https://www.un.org/en/desa/ensuring-indigenous-peoples%E2%80%99-rights-age-ai",
     type: "guide",
-    category: "global-resources",
+    category: "cultural-data-sovereignty",
     description: "United Nations Department of Economic and Social Affairs guidance on Indigenous peoples' rights in AI development, grounded in UNDRIP and the principle of free, prior, and informed consent.",
     region: "Global",
     published: true
@@ -484,7 +487,7 @@ const RESOURCES = [
     title: "UNESCO — Indigenous Data Sovereignty and AI Developments",
     url: "https://www.unesco.org/ethics-ai/en/articles/new-report-and-guidelines-indigenous-data-sovereignty-artificial-intelligence-developments",
     type: "guide",
-    category: "global-resources",
+    category: "cultural-data-sovereignty",
     description: "UNESCO report and guidelines for culturally sensitive AI development with Indigenous communities in Latin America and the Caribbean, centering self-determination and consent throughout.",
     region: "Latin America & Caribbean",
     published: true
@@ -494,7 +497,7 @@ const RESOURCES = [
     title: "CGDev — A Roadmap: AI Speaks the World's Languages",
     url: "https://www.cgdev.org/blog/roadmap-ai-speaks-worlds-languages",
     type: "guide",
-    category: "global-resources",
+    category: "learning-gathering-ground",
     description: "Policy analysis of what genuine linguistic inclusion in AI would require, including the structural and governance changes beyond technical solutions.",
     region: "Global",
     published: true
@@ -504,7 +507,7 @@ const RESOURCES = [
     title: "Brookings — Avoiding the Next Digital Divide: Tribal Digital Sovereignty and AI",
     url: "https://www.brookings.edu/articles/avoiding-the-next-digital-divide-defining-digital-sovereignty-for-tribal-nations-in-the-ai-age/",
     type: "paper",
-    category: "global-resources",
+    category: "learning-gathering-ground",
     description: "Policy analysis of how AI infrastructure investment risks replicating past patterns of exclusion for Indigenous nations, and what equitable participation in the AI era actually requires.",
     region: "United States",
     published: true
@@ -514,7 +517,7 @@ const RESOURCES = [
     title: "AI and Indigenous Peoples' Realities",
     url: "https://www.culturalsurvival.org/publications/cultural-survival-quarterly/artificial-intelligence-and-indigenous-peoples-realities",
     type: "paper",
-    category: "global-resources",
+    category: "learning-gathering-ground",
     description: "Indigenous voices from the Global South on AI, surveillance, and corporate accountability, offering a direct critique of Big Tech's approach to Indigenous rights.",
     region: "Global",
     published: true
@@ -524,7 +527,7 @@ const RESOURCES = [
     title: "Radical AI — Indigenous AI",
     url: "https://www.radicalai.org/indigenous-ai",
     type: "guide",
-    category: "global-resources",
+    category: "cultural-data-sovereignty",
     description: "Curated collection of resources connecting AI discourse with Indigenous rights, sovereignty, and social justice frameworks from a critical perspective.",
     region: "Global",
     published: true
@@ -534,20 +537,20 @@ const RESOURCES = [
     title: "AI Threatens Indigenous Data Sovereignty and Digital Self-Determination",
     url: "https://policyoptions.irpp.org/2025/05/ai-indigenous-data/",
     type: "paper",
-    category: "global-resources",
+    category: "learning-gathering-ground",
     description: "Written by Margaret Yun-Pu Tu, an Indigenous scholar from the Pangcah/Amis people, arguing that OCAP principles must be meaningfully embedded in national AI strategies.",
     region: "Canada/Taiwan",
     published: true
   },
 
-  // SAFER AI PRACTICES
+  // COMMUNITY SAFEGUARDS & POLICY
 
   {
     id: "iapp-data-repurposing",
     title: "IAPP: Data Repurposing and Indigenous Privacy",
     url: "https://iapp.org/news/a/data-repurposing-algorithmic-bias-and-indigenous-privacy-in-the-age-of-ai",
     type: "paper",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "What happens to your data after you share it?",
     description: "Data collected for one purpose is routinely repurposed for another without consent. For Indigenous communities, this has included governments profiting from the sale of community data. Understanding this pattern is essential before agreeing to any data collection.",
     region: "Canada",
@@ -558,7 +561,7 @@ const RESOURCES = [
     title: "GitGuardian: ChatGPT Data Practices",
     url: "https://blog.gitguardian.com/chatgpt-security-concern/",
     type: "guide",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "What does ChatGPT do with your inputs?",
     description: "ChatGPT stores conversations and can use inputs for model training. Before using it for anything related to community knowledge, health, or legal matters, understand exactly what you are agreeing to.",
     region: "Global",
@@ -569,7 +572,7 @@ const RESOURCES = [
     title: "Microsoft BYOL: Bring Your Own Language",
     url: "https://github.com/microsoft/byol",
     type: "tool",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "Who controls the data in a technology partnership?",
     description: "Questions to ask before any AI partnership:",
     bullets: [
@@ -587,7 +590,8 @@ const RESOURCES = [
     title: "Te Hiku Media: Kaitiakitanga License",
     url: "https://tehiku.nz/",
     type: "framework",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
+    featured: true,
     question: "What does genuine community data consent look like?",
     description: "The Kaitiakitanga License treats data as something cared for rather than owned. Any benefit derived flows back to the source community. A working model for what community-controlled AI partnerships can look like.",
     region: "Aotearoa New Zealand",
@@ -598,7 +602,7 @@ const RESOURCES = [
     title: "ADA.gov: AI and Disability Rights",
     url: "https://www.ada.gov/resources/ai-guidance/",
     type: "guide",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "What legal protections apply when AI affects services?",
     description: "Federal guidance confirms AI systems must comply with the Americans with Disabilities Act. Legal protections exist even when they are not enforced. Know your rights before AI tools are deployed in any service context.",
     region: "United States",
@@ -609,7 +613,7 @@ const RESOURCES = [
     title: "AI Problems Index",
     url: "https://ai-problems-index.vercel.app/",
     type: "guide",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "How do you separate legitimate AI concerns from hype?",
     description: "A comprehensive index of real AI problems, misconceptions, and cognitive fallacies. Useful for evaluating AI claims and identifying which concerns deserve resources and attention.",
     region: "Global",
@@ -620,7 +624,7 @@ const RESOURCES = [
     title: "GitGuardian: GitHub Copilot Data Practices",
     url: "https://blog.gitguardian.com/github-copilot-security-and-privacy/",
     type: "guide",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "What leaves your environment when using AI coding tools?",
     description: "GitHub Copilot accesses code and context beyond what you explicitly prompt. Before using it on community projects, understand what it can see and what may leave your environment.",
     region: "Global",
@@ -632,7 +636,7 @@ const RESOURCES = [
     title: "Digital Applied: Local LLM Deployment Privacy Guide",
     url: "https://www.digitalapplied.com/blog/local-llm-deployment-privacy-guide-2025",
     type: "guide",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "How do you evaluate whether a local AI tool is actually private?",
     description: "Not all local AI tools are equal on privacy. This guide evaluates tools across six privacy criteria and flags that closed-source options like LM Studio have audit limitations. For communities with compliance requirements, open-source tools like Ollama and llama.cpp are recommended.",
     region: "Global",
@@ -643,7 +647,7 @@ const RESOURCES = [
     title: "SnitchBench",
     url: "https://www.snitchbench.com/dashboard",
     type: "tool",
-    category: "safer-ai-practices",
+    category: "community-safeguards",
     question: "Could your AI report your conversations to authorities?",
     description: "A benchmark that tests how aggressively different AI models report user conversations to the FBI, FDA, or media. Some cloud models contact authorities after a single message. For Indigenous communities with well-founded concerns about federal surveillance, this is not hypothetical — it is a documented behavior of cloud AI systems.",
     region: "Global",
