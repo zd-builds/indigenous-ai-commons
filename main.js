@@ -3,25 +3,25 @@
 const CATEGORIES = [
   {
     id: "indigenous-innovations",
-    title: "Indigenous Innovations",
+    title: "Indigenous AI Innovations",
     descriptor: "AI and technology tools designed and led by Indigenous creators",
     description: "Tools, models, and platforms built from within communities — centering Indigenous values, languages, and sovereignty from day one."
   },
   {
     id: "community-safeguards",
-    title: "Community Safeguards & Policy",
+    title: "AI Governance & Community Policy",
     descriptor: "Governance frameworks, policies, and practical safety guides for your community",
     description: "Policy templates, example governance documents, and the questions every community deserves answered before signing any data agreement or adopting any AI tool."
   },
   {
     id: "cultural-data-sovereignty",
-    title: "Cultural & Data Sovereignty",
+    title: "AI, Data & Cultural Sovereignty",
     descriptor: "Why data sovereignty matters — and what Indigenous communities worldwide are doing about it",
     description: "Resources that treat data as a living cultural resource rooted in community identity, land, language, and the right to self-determination."
   },
   {
     id: "learning-gathering-ground",
-    title: "Learning & Gathering Ground",
+    title: "AI Learning & Gathering Ground",
     descriptor: "Research, scholarship, and community-built knowledge from across the world",
     description: "Academic research, community-led analyses, and global voices documenting what AI means — and what it should mean — for Indigenous peoples."
   }
