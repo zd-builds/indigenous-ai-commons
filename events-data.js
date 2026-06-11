@@ -102,6 +102,16 @@ const EVENTS_DATA = [
     recording: null
   },
   {
+    title: "Indigenous Voices in Global AI: A Conversation in Circle",
+    date: "2026-06-17",
+    type: "Webinar",
+    org: "Animikii Indigenous Technology",
+    description: "Jeff Ward invites the network into a circle-style conversation to share what he heard at the 4th GPAI Innovation Workshop in Rio &mdash; covering AI literacy, cooperation frameworks for AI governance, AI from local data, and cultural diversity in AI training, each through an Indigenous lens &mdash; and to gather input on how Animikii should represent Indigenous priorities in Canada&rsquo;s AI sector going forward. 11:00 AM PT / 2:00 PM ET.",
+    url: "https://us02web.zoom.us/meeting/register/vkPcndIVQcW5aOEMzmN5Xg",
+    cta: "Register",
+    recording: null
+  },
+  {
     title: "ARDC Indigenous Data Governance Masterclass 2026",
     date: "2026-06-18",
     dateEnd: "2026-06-19",
