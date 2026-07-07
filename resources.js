@@ -12,7 +12,7 @@ const RESOURCES = [
     category: "indigenous-innovations",
     description: "An Indigenous-led AI project centering Māori values, language, and sovereignty, built with data governance frameworks that keep community knowledge under community control.",
     region: "Aotearoa New Zealand",
-    published: true
+    published: false
   },
   {
     id: "te-hiku-media",
@@ -53,7 +53,7 @@ const RESOURCES = [
     category: "indigenous-innovations",
     description: "Indigenous-focused technology organization developing tools and frameworks for community-controlled AI and data sovereignty.",
     region: "Global",
-    published: true
+    published: false
   },
 
   {
@@ -108,6 +108,37 @@ const RESOURCES = [
   },
 
   {
+    id: "cherokee-ai-legal-agent",
+    title: "Cherokee Nation AI Legal Agent",
+    url: "https://www.forbes.com/sites/ronschmelzer/2025/08/17/cherokee-nation-shows-how-ai-governance-can-be-sovereign/",
+    type: "project",
+    category: "indigenous-innovations",
+    description: "Built in Microsoft Copilot Studio with MIT intern support, this system unifies treaty law, tribal codes, executive orders issued by the Principal Chief, and Cherokee Nation Supreme Court rulings into a single searchable repository. Designed for citizens, attorneys, and the tribal attorney general's office. Demonstrates sovereign AI governance grounded in tribal legal tradition. Government-operated and sovereignty-affirming, though hosted on Microsoft's cloud infrastructure.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "irrigopt-ai",
+    title: "IrrigOpt AI — Yakama Nation Irrigation Platform",
+    url: "https://solve.mit.edu/solutions/97706",
+    type: "project",
+    category: "indigenous-innovations",
+    description: "An AI platform designed to provide hyperlocal irrigation guidance, crop yield projections, and drought forecasts for Yakama Nation farmers. Uses 25+ years of historical climate and soil data; developed with Yakama Nation communities as primary stakeholders. MIT Solve Indigenous Communities Fellow (2025). In active development — relationship with Yakama Nation is community-engaged, not yet a confirmed deployment.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "morongo-legal-chatbot",
+    title: "Morongo Band of Mission Indians Legal Chatbot",
+    url: "https://www.brookings.edu/articles/avoiding-the-next-digital-divide-defining-digital-sovereignty-for-tribal-nations-in-the-ai-age/",
+    type: "project",
+    category: "indigenous-innovations",
+    description: "An internal AI chatbot that cross-references cultural customs with Tribal council resolutions, ballot referenda, and ordinances — helping staff and leadership navigate layered internal sources of legal authority. A model for integrating cultural knowledge with formal governance records. (Source: Brookings, Feb 2026.)",
+    region: "United States",
+    published: true
+  },
+
+  {
     id: "cherokee-salmon-monitoring",
     title: "Cherokee Nation AI Salmon Monitoring System",
     url: "#",
@@ -155,7 +186,7 @@ const RESOURCES = [
   {
     id: "cherokee-nation-ai",
     title: "Cherokee Nation AI Task Force",
-    url: "https://www.cherokee.org/all-services/tribal-technology/",
+    url: "https://www.cherokee.org/media/0ipldvul/task-force-report-on-ai-data-sovereignty-cybersecurity.pdf",
     type: "community",
     category: "learning-gathering-ground",
     description: "The Cherokee Nation established an AI task force and governance committees to evaluate AI against Cherokee values before adoption. Companies must complete an AI questionnaire before working with the Nation. Data literacy programs extend these protections community-wide.",
@@ -175,7 +206,7 @@ const RESOURCES = [
   {
     id: "tribal-digital-sovereignty-guidebook",
     title: "Tribal Digital Sovereignty Guidebook",
-    url: "https://apps.law.asu.edu/FB/Tribal-Digital-Sovereignty-Guidebook-November-2025/",
+    url: "https://aipi.asu.edu/sites/g/files/litvpz1606/files/2025-11/Tribal%20Digital%20Sovereignty%20Guidebook_0.pdf",
     type: "guide",
     category: "learning-gathering-ground",
     description: "Practical guide for Indigenous nations on broadband, spectrum sovereignty, data governance, and AI, framing digital infrastructure as an instrument of self-determination. From ASU's American Indian Policy Institute.",
@@ -340,11 +371,33 @@ const RESOURCES = [
   {
     id: "idnau",
     title: "Indigenous Data Network Australia",
-    url: "https://idnau.org/resources",
+    url: "https://idnau.org/resources/catalogue",
     type: "community",
     category: "cultural-data-sovereignty",
     description: "Australian network building Indigenous data sovereignty capacity, connecting researchers, communities, and policymakers around the principle of community-controlled data governance.",
     region: "Australia",
+    published: true
+  },
+
+  {
+    id: "gida-global",
+    title: "Global Indigenous Data Alliance (GIDA)",
+    url: "https://gida-global.org/",
+    type: "framework",
+    category: "cultural-data-sovereignty",
+    featured: true,
+    description: "The international body articulating Indigenous data sovereignty as a relational framework — centering data as relations rather than as property or resource. Stewards the CARE Principles (Collective Benefit, Authority to Control, Responsibility, Ethics) and convenes Indigenous data sovereignty networks across multiple continents. The foundational reference point for understanding what 'data as relations' means in governance practice.",
+    region: "Global",
+    published: true
+  },
+  {
+    id: "new-commons-incubator",
+    title: "New Commons Incubator",
+    url: "https://newcommons.ai/",
+    type: "community",
+    category: "cultural-data-sovereignty",
+    description: "A six-month capacity-building program supporting Indigenous-led teams in developing data commons proposals for language and cultural preservation in the AI era. Run by the GovLab's Open Data Policy Lab with Microsoft and UNESCO as partners. Applications open June 18 – August 14, 2026. Emphasizes Indigenous-led governance and community benefit-sharing. Note: Microsoft and UNESCO co-sponsor — readers should evaluate the governance terms and who controls the resulting commons before applying.",
+    region: "Global",
     published: true
   },
 
@@ -389,7 +442,7 @@ const RESOURCES = [
     category: "learning-gathering-ground",
     description: "$22M Indigenous-led research project at Concordia University expanding AI's definition of intelligence to include Indigenous knowledge systems.",
     region: "Canada",
-    published: true
+    published: false
   },
   {
     id: "iapp-indigenous-privacy",
@@ -455,13 +508,34 @@ const RESOURCES = [
   {
     id: "making-kin-machines",
     title: "Making Kin with the Machines",
-    url: "https://jods.mitpress.mit.edu/pub/lewis-arista-pechawis-kite/release/1",
+    url: "https://jods.mitpress.mit.edu/pub/lewis-arista-pechawis-kite",
     type: "paper",
     category: "learning-gathering-ground",
     description: "Award-winning 2018 essay by Jason Edward Lewis, Noelani Arista, Archer Pechawis, and Suzanne Kite in MIT Press Journal of Design and Science. Proposes drawing on Indigenous kinship protocols to reimagine the epistemological foundations of AI — arguing that centering human well-being alone is too narrow and that AI belongs within an extended circle of relationships.",
     region: "Global",
     published: true
   },
+  {
+    id: "ou-sovereign-brief-data-centers",
+    title: "OU Native Nations Center — Sovereign Brief: AI Data Centers and Tribes (June 2026)",
+    url: "https://www.ou.edu/nativenationscenter/research/sovereign-brief-ai-data-centers-and-tribes",
+    type: "paper",
+    category: "learning-gathering-ground",
+    description: "Reviews emerging federal and state policy trends on AI data center development and outlines tribal governance options — including federal co-management frameworks, contract language for sovereignty protections, and formal consultation requirements. By Tana Fitzpatrick, J.D., Native Nations Center for Tribal Policy Research, University of Oklahoma. Open access, Creative Commons license. Note: focuses on physical infrastructure policy; sets aside Indigenous data ethics — pairs with, rather than replaces, other sovereignty resources here.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "aipi-policy-tracking-dashboard",
+    title: "AIPI Federal Policy Tracking Dashboard",
+    url: "https://aipi.asu.edu/solutions",
+    type: "tool",
+    category: "learning-gathering-ground",
+    description: "A real-time tracker of congressional bills, Federal Register notices, executive orders, and agency activity affecting Tribal Nations. Customizable by issue area (health, education, environment, technology); includes public comment deadlines and historical data from 2021. Weekly analyst updates by ASU's American Indian Policy Institute. Free access with brief registration.",
+    region: "United States",
+    published: true
+  },
+
   {
     id: "abundant-intelligences-site",
     title: "Abundant Intelligences — Research Program",
@@ -479,9 +553,9 @@ const RESOURCES = [
     type: "paper",
     category: "learning-gathering-ground",
     featured: false,
-    description: "A critical brief demonstrating the core differences between Western “privacy” and Indigenous “sovereignty,” and why standard notice models fail communities.",
+    description: "A critical brief demonstrating the core differences between Western 'privacy' and Indigenous 'sovereignty,' and why standard notice models fail communities.",
     region: "United States",
-    published: true
+    published: false
   },
 
   {
@@ -497,12 +571,12 @@ const RESOURCES = [
 
   {
     id: "yurok-information-sharing-2026",
-    title: "Yurok Tribe Information Sharing Agreement Template (2026)",
-    url: "#",
+    title: "Yurok Tribe Sovereign Data Sharing &amp; Security Agreement",
+    url: "https://resources.ca.gov/-/media/CNRA-Website/Files/Initiatives/Tribal-Affairs/TemplateYurok-SDSSA-for-Research.pdf",
     type: "framework",
     category: "cultural-data-sovereignty",
     featured: false,
-    description: "An open legal toolkit model governing the collection and use of culturally sensitive information to prevent unauthorized third-party generative AI scraping.",
+    description: "A comprehensive data sharing agreement template governing creation, collection, exchange, storage, and use of culturally sensitive information. Developed by the largest federally recognized tribe in California and released for adaptation by other nations. The sovereignty-forward framing is more protective than standard institutional templates.",
     region: "United States",
     published: true
   },
@@ -515,7 +589,7 @@ const RESOURCES = [
     featured: false,
     description: "A curated literature review tracking the operational implementation of the CARE Principles and traditional knowledge labels under generative AI pressures.",
     region: "Global",
-    published: true
+    published: false
   },
 
   // CULTURAL & DATA SOVEREIGNTY (from global resources)
@@ -612,7 +686,7 @@ const RESOURCES = [
     featured: false,
     description: "A policy framework detailing legal agreements, data protection codes, and unified digital governance strategies built specifically for Tribal Nations navigating AI.",
     region: "United States",
-    published: true
+    published: false
   },
   {
     id: "niaa-ai-transparency-2026",
@@ -623,6 +697,57 @@ const RESOURCES = [
     featured: false,
     description: "A public agency blueprint showing how to strictly apply Indigenous Data Sovereignty rules to enterprise AI use, mapping out where AI is restricted in community decision-making.",
     region: "Australia",
+    published: false
+  },
+
+  {
+    id: "cherokee-data-center-task-force",
+    title: "Cherokee Nation Data Center Task Force (2026)",
+    url: "https://www.cherokeephoenix.org/news/cherokee-nation-establishes-task-force-to-study-the-impact-of-data-centers/",
+    type: "framework",
+    category: "community-safeguards",
+    description: "Principal Chief Chuck Hoskin Jr. established a nine-member task force by executive order (Feb. 24, 2026) to study environmental and economic impacts before any data center siting decision on Cherokee Nation lands. Led by Secretary of Natural Resources Christina Justice. Citizens engaged via the Gadugi Portal. A model of proactive governance — evaluating infrastructure proposals through a community lens before approving any agreement.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "seminole-nation-moratorium",
+    title: "Seminole Nation of Oklahoma Data Center Moratorium (March 2026)",
+    url: "https://nativenewsonline.net/sovereignty/seminole-nation-of-oklahoma-passes-moratorium-on-data-centers/",
+    type: "framework",
+    category: "community-safeguards",
+    description: "The Tribal Council voted 24-0 for an indefinite moratorium on generative AI and hyperscale data center development after a startup corporation asked leadership to sign an NDA before disclosing project details. The first tribal council to pass such a moratorium. Triggered by an emergency town hall on March 3 where tribal members and neighboring non-Indigenous residents voiced environmental concerns. A landmark example of community-driven governance stopping a corporate proposal before it could take hold.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "muscogee-data-center-rejection",
+    title: "Muscogee (Creek) Nation National Council Rejects Data Center (November 2025)",
+    url: "https://ictnews.org/news/in-indian-country-data-centers-come-with-a-familiar-threat-of-colonialism-these-organizers-are-fighting-back/",
+    type: "community",
+    category: "community-safeguards",
+    description: "Citizens Jordan Harmon and Kenzie Roberts organized town halls across the reservation to oppose a proposed data center on Looped Square Ranch — a 5,570-acre food sovereignty parcel. The National Council rejected the Mvskoke Tech Park bill after council members reported receiving more constituent calls on this issue than any other. Harmon and Roberts were later featured on the cover of TIME magazine. A case study in citizen-led land protection under AI infrastructure pressure.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "sault-tribe-moratorium",
+    title: "Sault Ste. Marie Tribe of Chippewa Indians Data Center Moratorium (April 2026)",
+    url: "https://michiganadvance.com/2026/04/10/community-pushback-prompts-sault-tribe-leadership-to-adopt-moratorium-on-data-centers/",
+    type: "framework",
+    category: "community-safeguards",
+    description: "The Board of Directors voted unanimously on April 7, 2026 for an indefinite moratorium on AI data center development after community members raised concerns about energy use, land impact, and noise. The moratorium requires a tribal impact assessment, environmental and cultural resource evaluations, infrastructure and energy capacity analysis, and community consultation before it can be lifted — setting a clear standard for what due diligence looks like.",
+    region: "United States",
+    published: true
+  },
+  {
+    id: "honor-the-earth-nda-pattern",
+    title: "The NDA-Before-Pitch Pattern — Honor the Earth",
+    url: "https://futurism.com/artificial-intelligence/data-centers-tribal-communities",
+    type: "guide",
+    category: "community-safeguards",
+    description: "Honor the Earth executive director Krystal Two Bulls has documented a recurring corporate tactic: developers approach tribal leadership proposing solar infrastructure, then shift to hyperscale data center proposals. Before substantive discussions begin, companies often request NDAs — making leadership contractually accountable to the corporation rather than to their citizens. The Seminole Nation moratorium was directly triggered by this pattern. Knowing the warning signs before any pitch meeting is essential.",
+    region: "United States",
     published: true
   },
 

@@ -17,7 +17,7 @@ const CATEGORIES = [
     id: "cultural-data-sovereignty",
     title: "AI, Data & Cultural Sovereignty",
     descriptor: "Why data sovereignty matters — and what Indigenous communities worldwide are doing about it",
-    description: "Resources that treat data as a living cultural resource rooted in community identity, land, language, and the right to self-determination."
+    description: "Resources grounded in data as relations — Indigenous kinship, responsibility, and self-determination as the foundation of community authority over knowledge and AI."
   },
   {
     id: "learning-gathering-ground",
