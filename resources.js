@@ -592,6 +592,18 @@ const RESOURCES = [
     published: false
   },
 
+  {
+    id: "seekcommons-ai-enclosures-2025",
+    title: "\"They came for our land, now they are coming for our data\": Supporting digital sovereignty in the face of AI enclosures",
+    url: "https://zenodo.org/records/20604154",
+    type: "paper",
+    category: "cultural-data-sovereignty",
+    featured: false,
+    description: "Final report from a November 2025 SEEKCommons Research Coordination Network workshop drawing a direct parallel between historical land dispossession and AI-driven data enclosure, with panel discussions on digital autonomy and sovereignty from María Fernanda Yanchapaxi, Ben Tairea, Jane Anderson, Keolu Fox, Jeff Ward, Dorothy Howard, Lane Rasberry, and Luis Felipe R. Murillo.",
+    region: "Global",
+    published: true
+  },
+
   // CULTURAL & DATA SOVEREIGNTY (from global resources)
 
   {
