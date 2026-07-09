@@ -134,6 +134,26 @@ const EVENTS_DATA = [
     recording: null
   },
   {
+    title: "Data Sharing Agreements Between States and Tribal Public Health Authorities: A Review of Terms Commonly Negotiated",
+    date: "2026-07-22",
+    type: "Webinar",
+    org: "National Indian Health Board (NIHB)",
+    description: "A review of commonly used terms and provisions in data sharing agreements (DSAs) negotiated between states, Tribal public health departments, and Tribal Epidemiology Centers (TECs). Attorney Chris Alibrandi O&rsquo;Connor shares findings from a review of several DSAs, joined by representatives from a Tribal public health department, a TEC, and a state health department on what provisions they included and where they had to compromise. 2:00 PM ET.",
+    url: "https://us02web.zoom.us/meeting/register/Uk7RZxj7TpGLNB3P9vu2EQ",
+    cta: "Register",
+    recording: null
+  },
+  {
+    title: "Tech Sovereignty: A Tribal Leader&rsquo;s Guide to the AI Era",
+    date: "2026-07-22",
+    type: "Webinar",
+    org: "National Congress of American Indians (NCAI)",
+    description: "Virtual briefing equipping tribal decision-makers with strategies for governing artificial intelligence &mdash; protecting natural resources, safeguarding Tribal data sovereignty, and ensuring emerging technologies align with Tribal values &mdash; while leveraging AI for language preservation and economic development. Speakers: Cora Tso (Arizona State University) on land &amp; water risks; Dr. Krystal Tsosie &amp; Joe Yracheta (Native BioData Consortium) on data &amp; DNA risks; Danielle Forward (Natives Rising) on workforce opportunities; and Michael Running Wolf (FLAIR) on language innovation. 1:00&ndash;2:30 PM ET.",
+    url: "https://www.ncai.org/event/sovereignty-first-webinar",
+    cta: "Register",
+    recording: null
+  },
+  {
     title: "Indigenous Peoples and AI: Defending Rights, Shaping Futures",
     date: "2026-08-12",
     type: "Webinar",
