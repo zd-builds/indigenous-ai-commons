@@ -134,6 +134,17 @@ const EVENTS_DATA = [
     recording: null
   },
   {
+    title: "Indigenous AI Gathering 2026",
+    date: "2026-07-16",
+    dateEnd: "2026-07-17",
+    type: "Conference",
+    org: "Mila &ndash; Quebec AI Institute / Abundant Intelligences",
+    description: "Two-day in-person gathering at Mila in Montreal bringing together 50+ Indigenous innovators, technologists, and community leaders. Includes the Indigenous Pathfinders in AI Year 3 showcase, keynotes from Krystle Tsosie (&ldquo;Data has Descendants&rdquo;) and Solomon Enos (&ldquo;Ancestral Imagination&rdquo;), and panels on Indigenous data sovereignty, AI governance, and building Indigenous-led AI markets. Speakers include Michael Running Wolf, Keoni Mahelona, Peter-Lucas Jones, Danielle Boyer, and Jeff Ward.",
+    url: "https://mila.quebec/en/indigenous-ai-gathering-2026-meet-the-speakers",
+    cta: "View event",
+    recording: null
+  },
+  {
     title: "Data Sharing Agreements Between States and Tribal Public Health Authorities: A Review of Terms Commonly Negotiated",
     date: "2026-07-22",
     type: "Webinar",
